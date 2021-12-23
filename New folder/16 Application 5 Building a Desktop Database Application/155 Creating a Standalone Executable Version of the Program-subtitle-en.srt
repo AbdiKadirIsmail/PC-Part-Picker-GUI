@@ -1,0 +1,228 @@
+1
+00:00:00,000 --> 00:00:08,130
+Hi again, so we have this great program
+that works very well, and it consists of
+
+3
+00:00:08,130 --> 00:00:12,620
+three files.
+So two Python files, and one dot db file
+
+5
+00:00:12,620 --> 00:00:22,289
+where the data is stored. This is good.
+We can execute the script like this,
+
+7
+00:00:22,289 --> 00:00:29,910
+so using Python and we get the program
+displayed, but think if you want to
+
+9
+00:00:29,910 --> 00:00:34,620
+give your program to someone else, you
+can just tell them install Python and
+
+11
+00:00:34,620 --> 00:00:39,030
+you can execute the program by going to
+the terminal and invoking platform and
+
+13
+00:00:39,030 --> 00:00:44,610
+the script, so that may get terribly
+difficult for users who are not
+
+15
+00:00:44,610 --> 00:00:50,610
+experienced with programming so in
+that case you want to make a standalone
+
+17
+00:00:50,610 --> 00:00:56,910
+executable program that you can just send
+to anyone and they can just double click
+
+19
+00:00:56,910 --> 00:01:02,039
+it and go ahead and insert data and
+retrieve data and so on. So in this
+
+21
+00:01:02,039 --> 00:01:07,680
+lecture I'll show you how to make an
+executable file and you'll make that file
+
+23
+00:01:07,680 --> 00:01:14,070
+whether you are on a Mac, or Windows,
+or Linux so the code is the same.
+
+25
+00:01:14,070 --> 00:01:21,500
+There exists a great library to make
+standalone executables. That is the
+
+27
+00:01:21,500 --> 00:01:28,040
+pyinstaller, so you can install
+pyinstaller using pip.
+
+29
+00:01:29,900 --> 00:01:34,730
+And now it's terribly easy to make a
+standalone executable file out of your
+
+31
+00:01:34,730 --> 00:01:44,180
+Python scripts. All you have to do is
+call pyinstaller, and then point to your
+
+33
+00:01:44,180 --> 00:01:50,810
+script, so in this case our main script
+is frontend.py, so that's the script
+
+35
+00:01:50,810 --> 00:01:57,140
+that is holding all the code and
+it also imports the backend script,
+
+37
+00:01:57,140 --> 00:02:02,900
+so we want to point to that file, and if you
+leave it like this, you'll get a dot exe file
+
+39
+00:02:02,900 --> 00:02:07,880
+if you are on Windows, a dot app file
+if you are on a Mac, and together with
+
+41
+00:02:07,880 --> 00:02:13,070
+those files you will also get a bunch of
+other files that are associated with
+
+43
+00:02:13,070 --> 00:02:19,310
+your program. The benefit of that is that
+it gets easier to troubleshoot any
+
+45
+00:02:19,310 --> 00:02:22,610
+errors that you may get, so you have
+lots of files and then you can go to
+
+47
+00:02:22,610 --> 00:02:28,040
+those files and find the error, and so on.
+But if you want to be practical you'd
+
+49
+00:02:28,040 --> 00:02:34,580
+want to pass a parameter here called onefile.
+So that will create a single
+
+51
+00:02:34,580 --> 00:02:41,150
+executable file for you, and in this form
+you will also get a terminal, a command
+
+53
+00:02:41,150 --> 00:02:46,130
+line displayed on the background of
+your graphical user interface,
+
+55
+00:02:46,130 --> 00:02:50,290
+so if you don't want that
+you can specify another parameter called
+
+57
+00:02:50,290 --> 00:02:59,750
+windowed, so like that and execute.
+You'll have to wait a while and my
+
+59
+00:02:59,750 --> 00:03:05,330
+executable was created, so if you we're
+on a Mac this would be a dot app file,
+
+61
+00:03:05,330 --> 00:03:13,580
+so mine is here the dist folder, so in this
+folder, I can look up here. So frontend.exe.
+
+63
+00:03:13,580 --> 00:03:25,670
+If you execute that you'll get the
+window and as you see you also got the
+
+65
+00:03:25,670 --> 00:03:31,310
+books.db file generated so by
+default this only creates executable files,
+
+67
+00:03:31,310 --> 00:03:37,489
+and then when you execute the program
+for first time, remember that we had
+
+69
+00:03:37,489 --> 00:03:42,829
+the connect function in the
+back-end script so that function creates
+
+71
+00:03:42,829 --> 00:03:46,640
+a database.
+So that's what this did and if you view
+
+73
+00:03:46,640 --> 00:03:51,430
+all now you don't have any rows, so you
+don't have any data because this was
+
+75
+00:03:51,430 --> 00:03:59,150
+created from scratch.Sso in case you want
+to have the existing database, you'd want
+
+77
+00:03:59,150 --> 00:04:04,400
+to give to your user both
+the executable file and the existing
+
+79
+00:04:04,400 --> 00:04:12,800
+database that you have. So for instance
+let's say this doesn't exist and I can
+
+81
+00:04:12,800 --> 00:04:19,810
+go to my existing database, and if I put
+it here so Python knows where to search
+
+83
+00:04:19,810 --> 00:04:26,170
+for the database.
+Now if you view all you gather data from
+
+85
+00:04:26,170 --> 00:04:34,440
+the existing database and we can make a quick test.
+Let's add the book. "The great shirt".
+
+87
+00:04:34,440 --> 00:04:47,890
+Andi Taylor, and year 1913 and put a number
+there, add entry and the entry is added
+
+89
+00:04:47,890 --> 00:04:55,990
+to the database, and you can close the
+program and that's it. Hope you enjoyed this!
+
+91
+00:04:55,990 --> 00:05:00.00
+I'll see you in the next lecture.

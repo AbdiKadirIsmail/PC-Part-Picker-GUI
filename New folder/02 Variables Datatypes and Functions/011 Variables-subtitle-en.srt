@@ -1,0 +1,203 @@
+1
+00:00:00,210 --> 00:00:05,400
+Hi, in this lecture you're going to learn
+about variables. So what is a variable?
+
+3
+00:00:05,400 --> 00:00:10,980
+Well a variable is like a container
+where you can store various data types
+
+5
+00:00:10,980 --> 00:00:18,539
+in Python for instance this program now
+this doesn't have any variable in it for
+
+7
+00:00:18,539 --> 00:00:23,699
+now, so let me try and execute it and
+you'll see that this prints out of the
+
+9
+00:00:23,699 --> 00:00:29,609
+hello string. String is a data type, but
+we'll cover that later. Now what is the
+
+11
+00:00:29,609 --> 00:00:38,790
+variable? Well and variables will keep
+your code more organized. Let me create a
+
+13
+00:00:38,790 --> 00:00:45,149
+variable here, greeting so you can call
+your variables whatever you like you can
+
+15
+00:00:45,149 --> 00:00:50,070
+give them any name however there are
+some naming rules which I'll mention in
+
+17
+00:00:50,070 --> 00:00:55,739
+just a bit, so let me create this
+variable for now. I'll store in this
+
+19
+00:00:55,739 --> 00:01:01,980
+variable, I said variables are like
+containers so I'll store this text in the
+
+21
+00:01:01,980 --> 00:01:07,799
+variable greeting and then what I do is
+instead of doing print hello I'll do
+
+23
+00:01:07,799 --> 00:01:15,570
+print greeting and save the script ctrl
+s and then go through the command line,
+
+25
+00:01:15,570 --> 00:01:22,229
+the upper arrow key, enter to execute and
+you get the same output. So this is how
+
+27
+00:01:22,229 --> 00:01:26,670
+you create a variable you don't use any
+quotes because when you use quotes you
+
+29
+00:01:26,670 --> 00:01:34,229
+are creating a string data type not a
+variable and you can also use a dash
+
+31
+00:01:34,229 --> 00:01:43,439
+before the variable that would also be
+fine so you get the output correctly
+
+33
+00:01:43,439 --> 00:01:50,549
+but you cannot use numbers before the
+variable ctrl s to save, execute and get
+
+35
+00:01:50,549 --> 00:01:56,820
+an invalid syntax, so this syntax is not
+valid in Python, but you can use numbers
+
+37
+00:01:56,820 --> 00:02:09,119
+after or between the variable name let's
+say here greeting2. So that would
+
+39
+00:02:09,119 --> 00:02:13,860
+be fine to use so that's the condition
+about naming
+
+41
+00:02:13,860 --> 00:02:19,470
+your variables, you can start them with a
+letter or a, or an underscore. Now if
+
+43
+00:02:19,470 --> 00:02:24,720
+you're not experienced with programming
+you may still be confused on why do we
+
+45
+00:02:24,720 --> 00:02:31,370
+use these variables? Well this is a very
+simple program, actually very useless, but
+
+47
+00:02:31,370 --> 00:02:37,140
+normally your programs will interact
+with your users. That is what we call a
+
+49
+00:02:37,140 --> 00:02:43,140
+real program. You create a program to
+give it to people so they can interact
+
+51
+00:02:43,140 --> 00:02:48,810
+with the program they can generate all
+different outputs and so on, so let's go
+
+53
+00:02:48,810 --> 00:02:57,060
+Ahead and make this program more dynamic, so
+what I'll do here is I'll get the text
+
+55
+00:02:57,060 --> 00:03:03,720
+from the user interactively. To do that
+you need to use the input function, this
+
+57
+00:03:03,720 --> 00:03:09,959
+is also a Python function and inside
+the function you can enter a message to the
+
+59
+00:03:09,959 --> 00:03:16,640
+user so let's say write a greeting.
+A column and make some space there and then
+
+61
+00:03:20,519 --> 00:03:28,290
+you print greeting2, save the script.
+Execute and now the program is asking
+
+63
+00:03:28,290 --> 00:03:36,060
+us to enter some input so let's go ahead
+and say hi this time and we get the output
+
+65
+00:03:36,060 --> 00:03:42,150
+Printed out in here, hi, so what
+happened here is we created a variable
+
+67
+00:03:42,150 --> 00:03:49,320
+and that variable will store the value
+that the user submits in the command line
+
+69
+00:03:49,320 --> 00:03:55,590
+here, in the terminal so the user
+submitted the hi text and this text will be
+
+71
+00:03:55,590 --> 00:04:00,989
+stored in this variable so as I said
+variables are like containers and then can
+
+73
+00:04:00,989 --> 00:04:06,390
+use this text in various ways, but in
+this scenario I'm just passing it to the
+
+75
+00:04:06,390 --> 00:04:12,030
+print function, so I want to print it out
+on the terminal here and the print
+
+77
+00:04:12,030 --> 00:04:16,709
+function will get the value that is
+stored in the greeting2 variable and
+
+79
+00:04:16,709 --> 00:04:22,650
+print it out on the terminal. That's it.
+And yeah, I'd like to close this lecture
+
+81
+00:04:22,650 --> 00:04:27,110
+now and I'll see you in the next lecture.

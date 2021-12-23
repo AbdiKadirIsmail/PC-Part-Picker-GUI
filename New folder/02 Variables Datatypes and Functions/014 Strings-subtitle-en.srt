@@ -1,0 +1,233 @@
+1
+00:00:00,030 --> 00:00:05,240
+Hi, welcome again. In the previous lecture
+we were talking about numbers.
+
+3
+00:00:05,240 --> 00:00:11,370
+Specifically we looked at integers and
+float data types so these are referred
+
+5
+00:00:11,370 --> 00:00:15,809
+to as data types in Python, so integers
+and floats. In this lecture we're going
+
+7
+00:00:15,809 --> 00:00:23,970
+to look at strings. I already mentioned
+strings in the previous lecture.
+
+9
+00:00:23,970 --> 00:00:30,410
+So a string is everything that goes
+inside quotes. "Hi there". That is a string.
+
+11
+00:00:30,410 --> 00:00:40,170
+And of course strings can be stored in
+variables and you can print those
+
+13
+00:00:40,170 --> 00:00:44,579
+variables, so we're using the interactive
+shell now, but of course you can use a
+
+15
+00:00:44,579 --> 00:00:51,899
+part of script as we did previously.
+So numbers were used to do math operations,
+
+17
+00:00:51,899 --> 00:00:58,070
+but strings, strings are used for
+displaying information for the user.
+
+19
+00:00:58,070 --> 00:01:04,320
+So let's say you have a web application, and
+you want to generate some text
+
+21
+00:01:04,320 --> 00:01:10,140
+dynamically on the web page, so you'd use
+would use Python on the backend and
+
+23
+00:01:10,140 --> 00:01:18,509
+Python would send strings to the HTML
+code and HTML would render the
+
+25
+00:01:18,509 --> 00:01:24,689
+code on the web page basically that's
+the idea or if you want to create a
+
+27
+00:01:24,689 --> 00:01:31,229
+notepad, an editor with Python such as
+Atom let's say, all these things you see
+
+29
+00:01:31,229 --> 00:01:37,170
+here so my program.py selection file,
+so all this would be written as
+
+31
+00:01:37,170 --> 00:01:43,710
+strings inside Python and then you
+display them on the interface using
+
+33
+00:01:43,710 --> 00:01:48,780
+various functions, for instance if you
+want to display a string on the terminal
+
+35
+00:01:48,780 --> 00:01:57,030
+you'd use the print function. Now strings
+have methods associated with them. What I
+
+37
+00:01:57,030 --> 00:02:04,079
+mean with methods is let me go ahead
+and try out a method. Methods, for
+
+39
+00:02:04,079 --> 00:02:10,860
+methods you need to use the dot notation.
+So you'd refer to the string which is
+
+41
+00:02:10,860 --> 00:02:15,760
+string c in our case actually
+variable c, but the variable is holding
+
+43
+00:02:15,760 --> 00:02:24,750
+the strings so it's the same as doing
+here dot, so let's do c dot, replace and
+
+45
+00:02:24,750 --> 00:02:33,910
+what I want to replace is e with i.
+So I'm replacing, for string here I'm
+
+47
+00:02:33,910 --> 00:02:42,310
+replacing letter e with later i and what
+that will do it will replace all
+
+49
+00:02:42,310 --> 00:02:50,620
+the letters, all the occurrences of this
+letter in the string, so you'd ask where
+
+51
+00:02:50,620 --> 00:02:55,739
+can we see these method? Well that's
+very easy actually. You can do dir and
+
+53
+00:02:55,739 --> 00:03:01,540
+then pass the string there, any string.
+It could be c, it could be an empty string
+
+55
+00:03:01,540 --> 00:03:07,930
+or whatever and that will print out all
+the available methods that you can use
+
+57
+00:03:07,930 --> 00:03:16,630
+with strings, so let's say c dot upper.
+That will cover the strings to
+
+59
+00:03:16,630 --> 00:03:22,630
+upper case letters. Now if you want to
+know what these methods are about you
+
+61
+00:03:22,630 --> 00:03:29,380
+could ask for help.
+Just do help and then c, so the
+
+63
+00:03:29,380 --> 00:03:40,810
+string or just empty string dot 
+
+
+65
+00:03:44,320 --> 00:03:52,450
+here replace method of the string
+instance, so string is like the blueprint
+
+67
+00:03:52,450 --> 00:03:58,560
+that creates strings objects or you can
+say the data type that represents texts.
+
+69
+00:03:58,560 --> 00:04:08,950
+Look here.  Here is the syntax, so what you
+do is, you use a string like we did.
+
+71
+00:04:08,950 --> 00:04:16,840
+So let's say here replace. Then you open
+brackets. Here is the old item you want
+
+73
+00:04:16,840 --> 00:04:24,490
+to remove from the string and then the new
+item we want to replace it with i and
+
+75
+00:04:24,490 --> 00:04:30,140
+then what you see here in square brackets,
+that means this parameter is
+
+77
+00:04:30,140 --> 00:04:35,330
+optional so you can either pass it or
+not and you know in the previous case we
+
+79
+00:04:35,330 --> 00:04:42,100
+didn't pass it so what Python did was
+it replaced all the occurrences of the i
+
+81
+00:04:42,100 --> 00:04:48,070
+item but if you want to replace only the
+first occurrence you do one there and
+
+83
+00:04:48,070 --> 00:04:54,770
+that will replace all the first i over
+the first e with i. That's how it works
+
+85
+00:04:54,770 --> 00:05:02,720
+So strings, they support functions,
+so print is a function. Here. And they support
+
+87
+00:05:02,720 --> 00:05:08,530
+methods like this one here and they also
+support operators so you get "Here"
+
+89
+00:05:08,530 --> 00:05:19,190
+plus "There" and you get "HereThere" or you
+can make it more readable like that so
+
+91
+00:05:19,190 --> 00:05:23,930
+an empty space is also a string and yeah
+that's about strings for now and I'll
+
+93
+00:05:23,930 --> 00:05:26,380
+talk to you later.

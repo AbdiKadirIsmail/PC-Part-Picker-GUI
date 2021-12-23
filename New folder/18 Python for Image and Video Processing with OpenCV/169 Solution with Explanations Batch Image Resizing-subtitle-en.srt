@@ -1,0 +1,198 @@
+1
+00:00:00,260 --> 00:00:06,420
+Well I hope you solved the exercise and
+I believe it was not a difficult one.
+
+3
+00:00:06,420 --> 00:00:13,290
+My purpose there was to get you used to
+it with the OpenCV code, and also why
+
+5
+00:00:13,290 --> 00:00:19,410
+not to practice the For Loop, so as you
+can imagine this exercise would be solved
+
+7
+00:00:19,410 --> 00:00:25,800
+by using a For Loop, so let me go
+through the code line by line quickly.
+
+9
+00:00:25,800 --> 00:00:32,520
+So we have to import OpenCV, so cv2 and
+the glob library if you can recall it
+
+11
+00:00:32,520 --> 00:00:39,809
+what the globe does is that it finds
+the path names of some files given a certain
+
+13
+00:00:39,809 --> 00:00:46,820
+pattern, so in this case for instance I
+have this JPG files here, so, 1, 2, 3, 4, 5
+
+15
+00:00:46,820 --> 00:00:55,760
+images and I said ok, create a list of
+file names that contain everything in
+
+17
+00:00:55,760 --> 00:01:05,369
+first part and then jpg as the extension.
+So that will create a list such as say like
+
+19
+00:01:05,369 --> 00:01:12,659
+C and then path here and then galaxy, the
+jpg and then the other image path and so on.
+
+21
+00:01:12,659 --> 00:01:18,630
+You get the idea. And then what we need to
+do is iterate through this list. For each
+
+23
+00:01:18,630 --> 00:01:24,960
+path image path in in the list, in this
+list, we'll do these operations for each
+
+25
+00:01:24,960 --> 00:01:33,329
+of these items, so first we we'll read
+that image path, okay that image file
+
+27
+00:01:33,329 --> 00:01:40,200
+actually as a black and white image so 0
+is the flag, is the argument which implies
+
+29
+00:01:40,200 --> 00:01:45,060
+an image to read as black and white,
+in the grayscale actually, and then we
+
+31
+00:01:45,060 --> 00:01:51,210
+create a variable where we will store
+the resized images, so the image is 100
+
+33
+00:01:51,210 --> 00:01:57,299
+by 100. So I'm passing the original image
+here and the size, the new size that the
+
+35
+00:01:57,299 --> 00:02:03,149
+image will get. Then we want to show the
+image just for demonstration. This is not
+
+37
+00:02:03,149 --> 00:02:07,160
+really important, but it lets you check
+out the images that are being resized.
+
+39
+00:02:07,160 --> 00:02:14,150
+And this is the name of the window and
+then I pass here a wait key method and
+
+41
+00:02:14,150 --> 00:02:20,610
+500 means 500 milliseconds, so each image
+will show and it will wait for half
+
+43
+00:02:20,610 --> 00:02:24,540
+a second, so 500 milliseconds and then
+after this half second, Python will go
+
+45
+00:02:24,540 --> 00:02:28,770
+to the next line, and then to the
+next, and then it will go to the next
+
+47
+00:02:28,770 --> 00:02:32,970
+item of the list and so on.
+So wait key 500 milliseconds and then we
+
+49
+00:02:32,970 --> 00:02:38,880
+have destroy all windows after this time
+passes, and then we write the resized
+
+51
+00:02:38,880 --> 00:02:46,230
+image so re was a variable that holds
+the image object, the resized image object
+
+53
+00:02:46,230 --> 00:02:55,650
+and this here, all this is the new name of
+the file, so what we get here is so we will
+
+55
+00:02:55,650 --> 00:03:00,720
+have resized in the beginning of the
+image name and then just after that
+
+57
+00:03:00,720 --> 00:03:07,410
+we will have the name of the original
+image, so for instance we would have, for
+
+59
+00:03:07,410 --> 00:03:15,060
+galaxy would have resized galaxy dot jpg.
+So image here would be galaxy dot jpg
+
+61
+00:03:15,060 --> 00:03:21,920
+here which is this one here, and yeah
+because the script is inside this folder,
+
+63
+00:03:21,920 --> 00:03:32,990
+this list actually the image list would
+look something like galaxy dot jpg and then
+
+65
+00:03:32,990 --> 00:03:42,600
+kangaroos in Australia dot jpg and so on.
+So this gets the relative paths of the files.
+
+67
+00:03:42,600 --> 00:03:48,060
+We're not getting the full path. Okay,
+I hope that is clear, so resized galaxy.
+
+69
+00:03:48,060 --> 00:03:54,090
+We could add another score so that
+we discriminate the resized word from the
+
+71
+00:03:54,090 --> 00:04:07,440
+other image name, great. Let me execute this.
+Python script, so half a second, half a second,
+
+73
+00:04:07,440 --> 00:04:15,000
+and it's done. And let's check the images.
+So from here up are the original images
+
+75
+00:04:15,000 --> 00:04:19,890
+and these are the image products, so you
+can see here that all these
+
+77
+00:04:19,890 --> 00:04:25,979
+are 100 by 100,
+and they are in a grayscale. Okay.
+
+79
+00:04:25,979 --> 00:04:28,599
+That's it. See you in the next lecture.

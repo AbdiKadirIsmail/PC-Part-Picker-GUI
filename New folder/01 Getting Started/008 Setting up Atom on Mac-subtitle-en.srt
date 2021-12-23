@@ -1,0 +1,238 @@
+1
+00:00:00,000 --> 00:00:06,870
+Hello again. This is yet another lecture
+for Mac users and in this s lecture I'm going
+
+3
+00:00:06,870 --> 00:00:12,389
+to show you how to set up for the Atom
+editor on a Mac computer so if you're a
+
+5
+00:00:12,389 --> 00:00:19,439
+Windows user please skip this lecture.
+Atom is quite an advanced editor but if
+
+7
+00:00:19,439 --> 00:00:25,230
+you have your favorite editor by now you
+can go ahead and use that editor so
+
+9
+00:00:25,230 --> 00:00:32,009
+that's perfectly fine. If you choose to
+Look, to have a look at the Atom editor
+
+11
+00:00:32,009 --> 00:00:38,100
+then please follow this lecture.
+First of all you're going to have to
+
+13
+00:00:38,100 --> 00:00:50,879
+download Atom. Simply search for Atom
+editor and then go to its website which
+
+15
+00:00:50,879 --> 00:01:01,500
+Atom.io, download for Mac and
+so while you wait for the download this
+
+17
+00:01:01,500 --> 00:01:09,360
+is how the Atom editor will look like so
+like that and so the download has finished
+
+19
+00:01:09,360 --> 00:01:25,680
+on my end and you can go and click Atom.
+Click open and basically Atom
+
+21
+00:01:25,680 --> 00:01:31,680
+has been downloaded and has been
+installed so you've got a welcome guide
+
+23
+00:01:31,680 --> 00:01:41,280
+in here, you can close that. This is
+an empty file. I'm going to close it as
+
+25
+00:01:41,280 --> 00:01:51,090
+well and let me close Atom and try to
+show you how to actually open it from
+
+27
+00:01:51,090 --> 00:01:56,700
+Scratch, so how to start Adam from the
+beginning and so let's see how to create
+
+29
+00:01:56,700 --> 00:02:03,390
+a program and execute a program with
+Atom and now you want to launch Atom
+
+31
+00:02:03,390 --> 00:02:10,369
+and then go to view,
+developer open in dev mode and that
+
+33
+00:02:15,319 --> 00:02:20,209
+will ask you for the directory that you
+want to open, so go to the desktop, go to
+
+35
+00:02:20,209 --> 00:02:24,620
+the folder where you have your programs
+or the folder where you want to create
+
+37
+00:02:24,620 --> 00:02:35,209
+your programs if you haven't created any
+program yet and click open.
+
+39
+00:02:35,209 --> 00:02:44,510
+And so you get this tree view in here and close that
+and double-clicking a file will open the
+
+41
+00:02:44,510 --> 00:02:51,109
+file here in the editor and so you can
+go ahead and add more code there.
+
+43
+00:02:51,109 --> 00:02:59,030
+Three plus four, you can also
+create other files, so you right click on
+
+45
+00:02:59,030 --> 00:03:11,750
+the main directory, go to new file,
+Myprogram2.py. Let's say print
+
+47
+00:03:11,750 --> 00:03:19,849
+five this time and ctrl s to save and so you
+have two programs now in here and you
+
+49
+00:03:19,849 --> 00:03:26,510
+can switch through different files by
+clicking the tabs in here. So how to
+
+51
+00:03:26,510 --> 00:03:31,669
+execute this programs now? Well you can
+use your Mac terminal just as you did in
+
+53
+00:03:31,669 --> 00:03:36,470
+the previous lecture or even
+better you can go ahead and install a
+
+55
+00:03:36,470 --> 00:03:49,890
+package, so go two packages settings view,
+open, go to install.
+
+57
+00:03:49,890 --> 00:04:10,860
+Type platformio ide, so dash ide dash
+terminal. Enter to search and then go
+
+59
+00:04:10,860 --> 00:04:17,459
+ahead and install the platformio ide
+
+
+61
+00:04:20,760 --> 00:04:25,200
+platformio ide terminal has been
+installed successfully, so you can go ahead
+
+63
+00:04:25,200 --> 00:04:32,370
+and close settings and you'll see a plus
+icon in here. If you click that
+
+65
+00:04:32,370 --> 00:04:43,230
+an embedded terminal will open in Atom
+editor and you can drag it down and up
+
+67
+00:04:43,230 --> 00:04:52,650
+to resize it. If you see closely you'll
+notice that the terminal is open in the
+
+69
+00:04:52,650 --> 00:05:00,150
+current folder, see so untitled folder
+this one in here and that means you can go
+
+71
+00:05:00,150 --> 00:05:07,290
+ahead and use Python now, Python 3 and
+execute a program, my program, my temp
+
+73
+00:05:07,290 --> 00:05:17,550
+program.py and that will print
+hello. Actually it was supposed to print
+
+75
+00:05:17,550 --> 00:05:24,120
+hello and then 7 but maybe I didn't
+save the script, so click on the editor
+
+77
+00:05:24,120 --> 00:05:31,890
+here, ctrl s to save and then click on
+the terminal again press the upper arrow
+
+79
+00:05:31,890 --> 00:05:38,250
+key to call a previously executed
+command and execute and you get hello
+
+81
+00:05:38,250 --> 00:05:43,740
+and 7 and yeah this is how to use
+the Atom editor. Now this is good
+
+83
+00:05:43,740 --> 00:05:48,360
+because you have both, you have the
+directory tree here with your files, with
+
+85
+00:05:48,360 --> 00:05:52,530
+your Python files and you have the
+editor here and you also have an
+
+87
+00:05:52,530 --> 00:05:57,539
+embedded terminal, so I hope you like
+Atom and from now on I'll be using
+
+89
+00:05:57,539 --> 00:06:03,680
+Windows, but things will be exactly the
+same because Python is a cross-platform
+
+91
+00:06:03,680 --> 00:06:09,620
+so which means the code is exactly the
+same on Mac, and Windows, and Linux as
+
+93
+00:06:09,620 --> 00:06:15,020
+well so just follow me and I hope you
+succeed with Python. I'll talk to you
+
+95
+00:06:15,020 --> 00:06:17,169
+in the next lecture.

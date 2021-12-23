@@ -1,0 +1,259 @@
+0
+00:00.240 --> 00:08.010
+H, again. In this video I'll show you how to create and how to run a Python program. In the previous lecture
+
+1
+00:08.060 --> 00:13.070
+we set up Python and we ran a Python interactive session.
+
+2
+00:13.260 --> 00:15.960
+So that was like a running code line by line.
+
+3
+00:16.170 --> 00:22.020
+But what you want to do instead, we want to write code that we are able to save it in a file and we're
+
+4
+00:22.020 --> 00:25.150
+able to run all the code at once.
+
+5
+00:25.200 --> 00:27.220
+So that's what we're going to do in this lecture.
+
+6
+00:27.460 --> 00:30.720
+And this is targeted to Windows users.
+
+7
+00:30.720 --> 00:32.940
+So if you have a Windows computer please watch this.
+
+8
+00:32.970 --> 00:38.550
+If you have a Mac computer or even a Linux computer please skip this video and go to the next video
+
+9
+00:39.240 --> 00:44.070
+where I show you the same process but on a Mac computer. So Windows users,
+
+10
+00:44.220 --> 00:52.230
+let's create a Python program and we're going to use very basic tools for now.
+
+11
+00:52.250 --> 00:59.760
+But then in the next lecture we're going to download and use an advanced editor. On Windows before creating
+
+12
+00:59.760 --> 01:00.850
+the program
+
+13
+01:00.890 --> 01:06.840
+there is something you need to make sure of. You go to organize and you go to folder search options
+
+14
+01:07.590 --> 01:12.990
+you go to View and then look here for this option.
+
+15
+01:12.990 --> 01:15.510
+Hide extensions for known file types.
+
+16
+01:15.600 --> 01:23.380
+You want to make sure this option is unchecked just as I have it here. Don't check it.
+
+17
+01:24.230 --> 01:34.170
+Cancel that and with the option unchecked you go had and right click and create create a text document.
+
+18
+01:34.710 --> 01:36.180
+And put a name.
+
+19
+01:36.180 --> 01:41.670
+Let's say my program and you want to remove the txt extension.
+
+20
+01:42.120 --> 01:43.660
+And want to say .py.
+
+21
+01:47.800 --> 01:48.290
+OK.
+
+22
+01:48.320 --> 01:49.160
+No problem.
+
+23
+01:49.190 --> 01:51.100
+I want to change the name.
+
+24
+01:51.470 --> 01:54.970
+Now this is a file where you're going to write your Python code.
+
+25
+01:55.070 --> 01:59.750
+So just go ahead and edit, edit it with an editor that you have.
+
+26
+01:59.760 --> 02:02.760
+Maybe Notepad.
+
+27
+02:02.900 --> 02:05.030
+We're going to use Atom later. For now
+
+28
+02:05.030 --> 02:05.790
+this is good.
+
+29
+02:06.070 --> 02:12.080
+And this program, what this will do, it will print out some text.
+
+30
+02:12.320 --> 02:14.690
+Let's say the 'Hello' text.
+
+31
+02:14.750 --> 02:20.300
+So that's what you do, you use the Python print function, and the print function
+
+32
+02:20.300 --> 02:21.760
+has this syntax.
+
+33
+02:22.070 --> 02:26.320
+So it expects to have some brackets opening and closing brackets.
+
+34
+02:26.590 --> 02:31.690
+And inside these brackets you want to pass the thing that you want to print out.
+
+35
+02:31.700 --> 02:36.020
+In this case this is called a string. We'll cover strings later.
+
+36
+02:36.140 --> 02:38.520
+Or you can say text.
+
+37
+02:38.660 --> 02:42.690
+So we want to print out some text and text goes inside quotes always.
+
+38
+02:42.940 --> 02:53.930
+So strings go, strings go inside quotes. Make sure you want to save control s, exit the script and then click
+
+39
+02:54.030 --> 03:01.610
+outside in here and hold shift and then right click and then you want to go to
+
+40
+03:07.910 --> 03:12.330
+Open command window here that you open the command prompt.
+
+41
+03:12.440 --> 03:16.560
+Look carefully and you'll see that the command prompt was open.
+
+42
+03:16.560 --> 03:25.370
+In this current directory which reflects which is actually the directory of your python file.
+
+43
+03:25.430 --> 03:28.960
+So this one in here. This one in here is in here.
+
+44
+03:29.360 --> 03:36.050
+So before you run the program you need to have these two directories the same because if you open
+
+45
+03:36.050 --> 03:44.250
+the command prompt from here as we did in the previous lecture that will go to another default directory.
+
+46
+03:45.240 --> 03:48.870
+So the best way to do it as I did it here.
+
+47
+03:48.990 --> 03:56.520
+Click and go to open command window here and then what you do is you type python and then the name of your
+
+48
+03:56.520 --> 04:07.080
+program, my program.py. So what you're doing is you're using Python, the python program to execute
+
+49
+04:07.200 --> 04:14.690
+this file and you get the output in the command line which is hello, the text Hello.
+
+50
+04:15.960 --> 04:25.780
+Similarly I could execute it with my Python 3.6, dot py and you get the same output again.
+
+51
+04:25.890 --> 04:29.180
+So 3.6, 3.7 doesn't make any big difference.
+
+52
+04:29.190 --> 04:31.560
+The differences are very very slight.
+
+53
+04:31.590 --> 04:33.670
+So you don't have to worry about that.
+
+54
+04:33.690 --> 04:36.320
+Let me execute it one more time, Python.
+
+55
+04:36.540 --> 04:44.480
+If you type now my and if you press the Tab key, that will autocomplete the name of your file.
+
+56
+04:44.480 --> 04:50.130
+So it will find the name of your file because it knows that you are in the current directory so use Tab
+
+57
+04:50.130 --> 04:54.670
+for auto completion and yeah, again you execute it and you get the output.
+
+58
+04:54.930 --> 05:02.130
+Of course you can go ahead and add other lines of code there. Let's say print 7, a number.
+
+59
+05:02.130 --> 05:10.710
+Numbers don't go inside quotes, control s to save and close and go to the command line again and press
+
+60
+05:10.890 --> 05:15.780
+the upper arrow key to execute, to call a previously executed statement.
+
+61
+05:15.840 --> 05:19.580
+So upper arrow key will call Python my program.py. Execute and you get
+
+62
+05:19.590 --> 05:19.990
+Hello
+
+63
+05:20.020 --> 05:22.120
+and 7.  That's the idea.
+
+64
+05:22.140 --> 05:24.890
+Hope you enjoyed this and I'll talk to you in the next lecture.

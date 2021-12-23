@@ -1,0 +1,195 @@
+1
+00:00:01,550 --> 00:00:08,189
+Great, now let's look at lists, so in the
+previous lecture we were looking at
+
+3
+00:00:08,189 --> 00:00:14,250
+strings and indexing and splitting
+strings and I will be working with lists
+
+5
+00:00:14,250 --> 00:00:20,210
+which are very similar to strings. They
+are similar because they are both
+
+7
+00:00:20,210 --> 00:00:25,949
+referred to as sequences, so there are
+sequences of items. The difference is
+
+9
+00:00:25,949 --> 00:00:35,910
+that, let me open Python, and so the
+difference is that the string is made of
+
+11
+00:00:35,910 --> 00:00:41,730
+other strings so it can contain only
+strings of characters or strings.
+
+13
+00:00:41,730 --> 00:00:49,079
+whatever you like to call it, however
+lists can contain various other data
+
+15
+00:00:49,079 --> 00:01:00,809
+types, let's say H a letter, a number, and
+also a string. So this is a string the
+
+17
+00:01:00,809 --> 00:01:05,970
+first one, this is a number, an integer.
+This is also string with multiple
+
+19
+00:01:05,970 --> 00:01:14,460
+characters and that is a list, so for
+this you want to use square brackets to
+
+21
+00:01:14,460 --> 00:01:21,450
+create a list. Execute and yeah you can
+call it and so this is a list of three
+
+23
+00:01:21,450 --> 00:01:26,460
+items and you can also store other
+objects in a list but we'll cover other
+
+25
+00:01:26,460 --> 00:01:33,320
+objects in later sections, you know we
+have table of objects with lots of data.
+
+27
+00:01:33,320 --> 00:01:39,180
+You may store files in a list you may
+store widgets of a graphical user
+
+29
+00:01:39,180 --> 00:01:45,570
+interface that you are building and so
+on, so these are very useful and lists also
+
+31
+00:01:45,570 --> 00:01:51,180
+have indexing and you can split lists,
+you can extract items and so on. So the
+
+33
+00:01:51,180 --> 00:01:56,790
+good news is that lists have the
+same indexing system as strings and so
+
+35
+00:01:56,790 --> 00:01:59,790
+you've learned that in the previous
+lecture and you can go ahead and apply
+
+37
+00:01:59,790 --> 00:02:06,979
+that system not, so let's extract number 2.
+That would have an index of one.
+
+39
+00:02:06,979 --> 00:02:14,720
+Execute that and yeah you get 2 there. If you
+check the type you'll see that's an integer.
+
+41
+00:02:14,720 --> 00:02:20,760
+So every item of a list has its own
+data type, even also access more than
+
+43
+00:02:20,760 --> 00:02:28,970
+white one item of a list. Let's say
+you want the first two items. You do 0 1 2, so
+
+45
+00:02:28,970 --> 00:02:38,010
+like that or 0 to 2 whatever you like.
+That will produce another list so the
+
+47
+00:02:38,010 --> 00:02:49,459
+type of this split is a list. The type of
+the split of a string is a string, so S
+
+49
+00:02:49,459 --> 00:02:57,390
+for the string here, C for the list.
+Lists now have methods associated with
+
+51
+00:02:57,390 --> 00:03:02,130
+them just like strings do and so you can
+check what methods you have available
+
+53
+00:03:02,130 --> 00:03:08,220
+there by just doing a dir list.
+So this a the blueprint you can use
+
+55
+00:03:08,220 --> 00:03:13,200
+lists, you can pass empty square brackets
+in there, it's the same thing and then
+
+57
+00:03:13,200 --> 00:03:20,510
+you can use help to look at each of
+these methods, so these are the methods.
+
+59
+00:03:20,510 --> 00:03:31,260
+Without the underscore and let's look at
+the append method, so to apply methode
+
+61
+00:03:31,260 --> 00:03:39,690
+you do c the dot notation append and here
+on that 3. What that does, it adds
+
+63
+00:03:39,690 --> 00:03:44,549
+another item to the end of the list,
+So it appends an item to the
+
+65
+00:03:44,549 --> 00:03:49,850
+list and you can explore the other
+methods if you like so let's say help.
+
+67
+00:03:49,850 --> 00:03:59,160
+Remove like that and you'll see how to
+use that remove method, so you do
+
+69
+00:03:59,160 --> 00:04:03,750
+c.remove and then you pass the value of
+the item that you want to remove, so
+
+71
+00:04:03,750 --> 00:04:10,440
+not the index but the value. Let's say we
+want to remove 2 and you see that 2
+
+73
+00:04:10,440 --> 00:04:16,979
+is now gone from the list so look
+at the other methods of the list and try
+
+75
+00:04:16,979 --> 00:04:21,720
+to experiment with this and play around
+with them access items and split them
+
+77
+00:04:21,720 --> 00:04:27,470
+and you'll be good to go then.
+Thanks, I'll talk to you later.
+

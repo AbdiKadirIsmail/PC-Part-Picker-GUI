@@ -1,0 +1,270 @@
+1
+00:00:00,380 --> 00:00:09,230
+Okay before explaining the while loop,
+I'd like to introduce you user input.
+
+3
+00:00:10,219 --> 00:00:15,960
+User input is a feature that allows your
+script to interact with the user and
+
+5
+00:00:15,960 --> 00:00:20,609
+with interaction I mean when the user
+executes the script so like when we call
+
+7
+00:00:20,609 --> 00:00:26,400
+the script here, the script will ask the
+user to enter some input. Let's say they
+
+9
+00:00:26,400 --> 00:00:31,349
+will enter a number and the script will
+get this number and we process it, will
+
+11
+00:00:31,349 --> 00:00:35,910
+do some operations depending on what we
+have written inside the script and then
+
+13
+00:00:35,910 --> 00:00:39,770
+it will return some results back to the
+user.
+
+15
+00:00:39,770 --> 00:00:44,320
+And the user input feature is
+implemented through the input function
+
+17
+00:00:44,320 --> 00:00:50,330
+as simple as this input, and here you can
+write some message that will be shown to
+
+19
+00:00:50,330 --> 00:00:56,650
+the user. Let's say what planet are you
+from?
+
+21
+00:00:56,650 --> 00:01:04,790
+Just like that. Save the script and then
+go to your command line and execute.
+
+23
+00:01:04,790 --> 00:01:11,360
+This is script6 and the program is
+asking us to enter some input. Let's say
+
+25
+00:01:11,360 --> 00:01:16,580
+Earth. That's it.
+Here nothing happened because we didn't
+
+27
+00:01:16,580 --> 00:01:21,979
+do any other thing here rather than just
+asking the user to input some value so
+
+29
+00:01:21,979 --> 00:01:27,140
+let's do something with that value, but
+first of all or we need to store that
+
+31
+00:01:27,140 --> 00:01:33,470
+value inside the variable. That would be
+a good practice. Let's say planet equals
+
+33
+00:01:33,470 --> 00:01:39,740
+to the value that the user will input, so
+the planet will get the value that the
+
+35
+00:01:39,740 --> 00:01:43,190
+user will enter here.
+Then we can do something with the value.
+
+37
+00:01:43,190 --> 00:01:49,690
+Let's say we want to print that value.
+Planet. That's it. So let's execute again.
+
+39
+00:01:49,690 --> 00:01:59,600
+Mars this time. So the program prints out
+Mars. Okay, printing is good but let's go a
+
+41
+00:01:59,600 --> 00:02:06,770
+bit more advanced than that, so I'll go
+to my script2 and what I have here is a
+
+43
+00:02:06,770 --> 00:02:13,010
+function. Let me delete this, so we had the
+function here which we wrote before in
+
+45
+00:02:13,010 --> 00:02:18,800
+the course and this function gets the
+currency rate as input and amount of
+
+47
+00:02:18,800 --> 00:02:24,260
+euros which you want to convert to dollars.
+So the function calculates the
+
+49
+00:02:24,260 --> 00:02:30,080
+dollars given the euros and rate and it
+returns the dollars. What we will do now
+
+51
+00:02:30,080 --> 00:02:36,440
+is get a value for the rate and a value
+for euros from the user, so we'll get
+
+53
+00:02:36,440 --> 00:02:42,980
+those values here and then we will
+execute the function given those values.
+
+55
+00:02:42,980 --> 00:02:51,019
+For that we need two inputs here.
+Let's say R as a variable input.
+
+57
+00:02:51,019 --> 00:03:03,959
+Enter rate and once more enter euros.
+And this would be e. And then these
+
+59
+00:03:03,959 --> 00:03:12,209
+values would go here, so r for the rate
+and e for the euros, so we execute the
+
+61
+00:03:12,209 --> 00:03:17,280
+script. Python reads the function
+definition then it asks the user to
+
+63
+00:03:17,280 --> 00:03:22,829
+enter the rate. The user enters the rate.
+Then the script goes on. Python ask the
+
+65
+00:03:22,829 --> 00:03:30,150
+user to enter the euros. The user enters
+the euros and then those values are tests
+
+67
+00:03:30,150 --> 00:03:35,879
+to the currency converter function. Now I
+expect to get an error here, but I still
+
+69
+00:03:35,879 --> 00:03:39,870
+want to execute it so that you see what
+error you will get and that's how you
+
+71
+00:03:39,870 --> 00:03:47,849
+understand things better, so let's
+execute script number two yeah. This is
+
+73
+00:03:47,849 --> 00:03:52,530
+not the error I was talking about. This is
+because I forgot to save the script, so
+
+75
+00:03:52,530 --> 00:03:57,540
+let me execute it again. And so we are
+now asked to enter the rate. Let's say 100.
+
+77
+00:03:57,540 --> 00:04:03,810
+Yeah and euros let's say 3 euros.
+Why not?
+
+79
+00:04:03,810 --> 00:04:08,760
+And here is the error I was talking
+about, and Python is basically saying
+
+81
+00:04:08,760 --> 00:04:15,120
+that it cannot multiply strings. Why is that?
+Well that is because when the user
+
+83
+00:04:15,120 --> 00:04:21,239
+enters the numbers here as we did, the
+input function reads those values as
+
+85
+00:04:21,239 --> 00:04:26,370
+strings, so it doesn't immediately read
+them as numbers as we would probably
+
+87
+00:04:26,370 --> 00:04:32,880
+expect, but there is a solution to that.
+Once we get those strings here in the r
+
+89
+00:04:32,880 --> 00:04:38,490
+and e variable, we could convert them to
+a float. We would want to apply the float
+
+91
+00:04:38,490 --> 00:04:44,789
+function to each of these variables, so
+before these values will be passed to
+
+93
+00:04:44,789 --> 00:04:48,720
+the currency converter function for
+execution, the values of these variables
+
+95
+00:04:48,720 --> 00:04:53,880
+would first be converted to a float
+data type and lastly we would want to
+
+97
+00:04:53,880 --> 00:05:00,690
+print out the output that this function
+generates. That's it. Click save and
+
+99
+00:05:00,690 --> 00:05:09,040
+then go to the command line.
+And script2, enter rate. Let's say
+
+101
+00:05:09,040 --> 00:05:18,880
+four euros 102 this time, and so we get 400.
+So that was how you can make your
+
+103
+00:05:18,880 --> 00:05:24,700
+script interactive, so that the script
+can get the user input, process it and
+
+105
+00:05:24,700 --> 00:05:29,770
+then returns an output. In the next lecture
+I'll be incorporating the user input
+
+107
+00:05:29,770 --> 00:05:35,970
+function, while teaching you the while
+loop, so see you in the next lecture.
+

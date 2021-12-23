@@ -1,0 +1,310 @@
+1
+00:00:00,000 --> 00:00:04,110
+Hello there and welcome to this new
+lecture! In this lecture I'll show you
+
+3
+00:00:04,110 --> 00:00:09,240
+how to set up Python in your computer.
+Specifically these instructions are for
+
+5
+00:00:09,240 --> 00:00:15,210
+Windows users so if you are a Mac or
+Linux user you can skip this lecture
+
+7
+00:00:15,210 --> 00:00:18,300
+and you can go to the next lecture where
+I'll show you how to set up Python on a
+
+9
+00:00:18,300 --> 00:00:24,420
+Mac and instructions also work for Linux
+users so Windows users please follow if
+
+11
+00:00:24,420 --> 00:00:29,490
+you haven't installed Python yet, we're
+going to download and install python and
+
+13
+00:00:29,490 --> 00:00:36,630
+also try Python out. And so you go to
+python.org that's the official Python
+
+15
+00:00:36,630 --> 00:00:41,760
+website and you go to downloads and here
+you'll see the latest Python version.
+
+17
+00:00:41,760 --> 00:00:51,600
+Currently it is 3.6.0.
+Just click that and save file.
+
+19
+00:00:51,600 --> 00:00:57,750
+Also notice that there's also a version
+of Python 2 so Python 2.7 to be exact
+
+21
+00:00:57,750 --> 00:01:05,369
+but Python 2 is not being supported
+anymore after 2020 so Python 2 is slowly
+
+23
+00:01:05,369 --> 00:01:12,780
+retiring so it's advisable to use Python
+3 this one in here and once you have
+
+25
+00:01:12,780 --> 00:01:22,080
+downloaded the dot exe file just click it.
+Run. You can choose to install it in the
+
+27
+00:01:22,080 --> 00:01:27,509
+default directory but you can also do a
+customized installation if you want to
+
+29
+00:01:27,509 --> 00:01:32,700
+change the directory, anyway make sure
+you have checked this option at Python
+
+31
+00:01:32,700 --> 00:01:40,320
+3.6 to PATH so I'm going to go with the
+default installation process. Yeah that
+
+33
+00:01:40,320 --> 00:01:45,329
+was it. Set up was successful. You can
+close the window now and we can go ahead
+
+35
+00:01:45,329 --> 00:01:52,079
+and open Pythom so how do we do that
+on windows? Well we can press the
+
+37
+00:01:52,079 --> 00:01:58,590
+Windows key button, so we're talking
+about the Win key. By pressing it you
+
+39
+00:01:58,590 --> 00:02:03,990
+will be able to search on the start
+button, alternatively you can simply go
+
+41
+00:02:03,990 --> 00:02:10,289
+to the start button, click it and then
+type cmd and then click on c armed.exe
+
+43
+00:02:10,289 --> 00:02:15,470
+and that will open the windows command prompt.
+And so this is like the terminal
+
+45
+00:02:15,470 --> 00:02:21,110
+on Mac or Linux. On Mac and Linux it
+is referred to as the terminal on
+
+47
+00:02:21,110 --> 00:02:26,510
+Windows it is referred to as a comand
+prompt or command line. To open Python all
+
+49
+00:02:26,510 --> 00:02:32,930
+you have to do is type in Python and
+that will open an interactive session of
+
+51
+00:02:32,930 --> 00:02:39,650
+Python and an interactive session is
+best for testing out so here you can
+
+53
+00:02:39,650 --> 00:02:46,970
+write lines of code one by one like that
+and you promptly get the results in here.
+
+55
+00:02:46,970 --> 00:02:53,900
+So this is why we call it interactive, but
+you cannot, it's not very appropriate to
+
+57
+00:02:53,900 --> 00:02:59,150
+write multiple lines of code, so let's
+say you have a program that has 10 lines
+
+59
+00:02:59,150 --> 00:03:05,269
+of code and in that case you'd want to
+write those lines in a file, in a Python
+
+61
+00:03:05,269 --> 00:03:09,290
+file but we will cover that later and
+this is the interactive shell this is
+
+63
+00:03:09,290 --> 00:03:14,030
+good for testing, so before you do a
+program you are not sure about certain
+
+65
+00:03:14,030 --> 00:03:18,829
+aspects, certain commands that you
+want to include, certain keywords that
+
+67
+00:03:18,829 --> 00:03:23,239
+you want including in your program so you
+test things out in here very quickly.
+
+69
+00:03:23,239 --> 00:03:28,220
+This is very efficient and it's also
+good for learning. To exit the
+
+71
+00:03:28,220 --> 00:03:36,290
+interactive shell you press exit and
+brackets, open and closing brackets.
+
+73
+00:03:36,290 --> 00:03:43,220
+Now something you maybe, you probably noted
+was that the Python that I opened was version
+
+75
+00:03:43,220 --> 00:03:51,709
+3.5.2 but why is that because I
+installed Python 3.6 in here, 3.6, so why did
+
+77
+00:03:51,709 --> 00:03:55,010
+I get five Python 3.5.2?
+Well the answer is that I already had
+
+79
+00:03:55,010 --> 00:04:01,310
+Python 3.5.2
+installed on my Windows so in other words
+
+81
+00:04:01,310 --> 00:04:09,919
+before I install Python 3.6 I could
+trigger a Python shell like that so the
+
+83
+00:04:09,919 --> 00:04:15,260
+question is how do I run Python 3.6 now?
+Well the first thing you should know is
+
+85
+00:04:15,260 --> 00:04:20,690
+that there is no problem having multiple
+Python installations in your system, the
+
+87
+00:04:20,690 --> 00:04:25,880
+key here is that you have to assign
+different commands to each of your
+
+89
+00:04:25,880 --> 00:04:28,430
+Python
+instalations so for instance Python 3.5.2
+
+91
+00:04:28,430 --> 00:04:32,540
+has these commands
+to run Python. Now for Python 3.6
+
+93
+00:04:32,540 --> 00:04:39,770
+we need to assign another
+command and I'll go and search for the
+
+95
+00:04:39,770 --> 00:04:48,800
+installation directory of
+Python 3.6 so open that and now Windows
+
+97
+00:04:48,800 --> 00:04:54,470
+when you search for Python, when you
+enter the Python command here, Windows is
+
+99
+00:04:54,470 --> 00:04:59,450
+looking at the path variable, the Windows
+path variable and it's searching for
+
+101
+00:04:59,450 --> 00:05:05,510
+this type of command Python but this
+was already occupied by another so by
+
+103
+00:05:05,510 --> 00:05:09,530
+Python 3.5.2, that's why it
+triggers Python 3.5.2,
+
+105
+00:05:09,530 --> 00:05:15,980
+so in that case you may want to do
+trick here, let's say do Python 36 and
+
+107
+00:05:15,980 --> 00:05:28,070
+restart that command prompt and then
+run again python 36 and you get Python 36.
+
+109
+00:05:28,070 --> 00:05:37,340
+So that's the trick and again of course
+you can do operations here and so on
+
+111
+00:05:37,340 --> 00:05:43,760
+Of course you still have Python 3.5 at
+least I have Python 3.5 maybe you don't
+
+113
+00:05:43,760 --> 00:05:49,430
+because you didn't have any Python
+installed just yet, so that's the idea.
+
+115
+00:05:49,430 --> 00:05:53,720
+On your system if you install Python for
+the first time, if you install
+
+117
+00:05:53,720 --> 00:05:58,220
+Python 3.6 you'll be
+able to execute Python with this commands.
+
+119
+00:05:58,220 --> 00:06:03,980
+Python. If you had an existing Python
+installation and you install a new one,
+
+121
+00:06:03,980 --> 00:06:12,230
+no problem, you can run Python 36 like I did
+I hope this was clear and I hope you are
+
+123
+00:06:12,230 --> 00:06:18,460
+up and running now with Python
+And I'll talk to you in the next lectures.
+

@@ -1,0 +1,599 @@
+1
+00:00:00,030 --> 00:00:05,790
+Great, so let's go ahead and play around
+with OpenCV a little bit. Specifically
+
+3
+00:00:05,790 --> 00:00:10,920
+what you'll learn in this lecture is
+you will learn how to load images in Python
+
+5
+00:00:10,920 --> 00:00:17,250
+using OpenCV. You'll learn how to display
+them, resize, and then save the resized
+
+7
+00:00:17,250 --> 00:00:24,750
+images in new images image files, so load
+display, resize, and write images.
+
+9
+00:00:24,750 --> 00:00:32,189
+And I've got a nice image here of a galaxy,
+so I'll play around with this. The first
+
+11
+00:00:32,189 --> 00:00:37,559
+thing you want to do is import the
+library, and then the second thing is you
+
+13
+00:00:37,559 --> 00:00:44,969
+want to load the image in Python so
+image would be equal to cv2.image
+
+15
+00:00:44,969 --> 00:00:51,480
+read method, so the method expects now
+the path to the image that you want to
+
+17
+00:00:51,480 --> 00:00:59,370
+load in Python and that would be galaxy.jpg.
+So I, my script1.py file
+
+19
+00:00:59,370 --> 00:01:05,850
+file is in the same directory with
+galaxy.jpg, so i just need to pass
+
+21
+00:01:05,850 --> 00:01:12,299
+the file name here. And then there is yet
+another parameter for image read,
+
+23
+00:01:12,299 --> 00:01:19,170
+for imread method and then this parameter
+takes three arguments. Now, this parameter
+
+25
+00:01:19,170 --> 00:01:24,299
+specifies how you want to read the image
+in Python so do you want to read it as
+
+27
+00:01:24,299 --> 00:01:28,799
+our RBG image which means you want
+three bands in your image,
+
+29
+00:01:28,799 --> 00:01:35,250
+so you want a color image with
+a red band, blue, and green band. So if you
+
+31
+00:01:35,250 --> 00:01:42,299
+want to read the image as it is, so with
+colors you'd want to pass one here.
+
+33
+00:01:42,299 --> 00:01:48,060
+If you want to read the image as black and
+white image, so in a grayscale you'd want
+
+35
+00:01:48,060 --> 00:01:53,790
+to pass zero, and having a grayscale image
+implies that your image will have one
+
+37
+00:01:53,790 --> 00:01:59,430
+band and I'll get back to bands and
+explain them in just a moment. So we
+
+39
+00:01:59,430 --> 00:02:05,729
+also have minus one. This means the color
+image, but you also have an alpha channel
+
+41
+00:02:05,729 --> 00:02:10,830
+which means your image will have
+transparency capabilities, so if you
+
+43
+00:02:10,830 --> 00:02:14,170
+apply operations that require
+transparency
+
+45
+00:02:14,170 --> 00:02:19,180
+you can do that when you read, when you
+load the image with a minus one argument here.
+
+47
+00:02:19,180 --> 00:02:27,310
+Okay, so I would like to try out 0.
+Great, now before I show the image, before
+
+49
+00:02:27,310 --> 00:02:33,520
+I display the image on the screen I'll
+like you to understand what this image
+
+51
+00:02:33,520 --> 00:02:46,000
+object is about, so I'd want to print the
+type of it, just like that. Execute the
+
+53
+00:02:46,000 --> 00:02:56,520
+script, script1, yeah.
+Of course and try again, so this is a Numpy N
+
+55
+00:02:56,520 --> 00:03:07,660
+dimensional array, and if you want you
+can print that out, and you'll see the
+
+57
+00:03:07,660 --> 00:03:15,510
+actual Numpy array so this is a
+two-dimensional array with values in the
+
+59
+00:03:15,510 --> 00:03:21,520
+horizontal axis and in a vertical axis
+as well. So think of the image now and
+
+61
+00:03:21,520 --> 00:03:28,570
+this would be the very first, so the top
+left intensity value of the first pixel.
+
+63
+00:03:28,570 --> 00:03:34,540
+So 14 for example would be the intensity
+value in the grayscale for the first
+
+65
+00:03:34,540 --> 00:03:40,540
+pixel of image so for the top left pixel
+of the image, and then for the second
+
+67
+00:03:40,540 --> 00:03:45,150
+pixel and so on and then you have these
+dots which means Python cannot display
+
+69
+00:03:45,150 --> 00:03:50,320
+ever listed a long list in here because
+you have a couple of thousands of values
+
+71
+00:03:50,320 --> 00:03:54,070
+in the first row, and then you have a
+second row of pixels in the image
+
+73
+00:03:54,070 --> 00:04:00,550
+and the third and so on, and this makes
+the matrix of the pixel image, and if
+
+75
+00:04:00,550 --> 00:04:04,300
+you want to know how many numbers how
+many values you have in the horizontal
+
+77
+00:04:04,300 --> 00:04:08,770
+direction, how many values you have in
+the vertical direction you can go ahead
+
+79
+00:04:08,770 --> 00:04:19,500
+and print image shape. Okay. So let's say
+that the image resolution
+
+81
+00:04:19,500 --> 00:04:26,030
+is 1485 by 990.
+So Python stores the image as a Numpy
+
+83
+00:04:26,030 --> 00:04:32,180
+array, as a matrix of numbers as easy
+as that. If you want to check the
+
+85
+00:04:32,180 --> 00:04:40,280
+dimensional of your array, of your image you
+can do that with this expression and you
+
+87
+00:04:40,280 --> 00:04:47,120
+see that you have two dimensions. Now if
+they sauce a color image so with three
+
+89
+00:04:47,120 --> 00:04:52,910
+bands, red, blue, and green things
+will change a little bit.
+
+91
+00:04:52,910 --> 00:05:01,940
+So you've got three dimensions and you
+also see that the new array is a bit
+
+93
+00:05:01,940 --> 00:05:07,280
+different, so here you've got values for
+each of the band so for green, to red
+
+95
+00:05:07,280 --> 00:05:15,650
+green, and blue, so I'd like to stick with
+the gray image, and what I can do now is
+
+97
+00:05:15,650 --> 00:05:21,530
+I can display the image on the screen
+and for that you want to use the image so
+
+99
+00:05:21,530 --> 00:05:27,199
+imshow method and this will display a
+window and you want to name that window,
+
+101
+00:05:27,199 --> 00:05:34,760
+so you want to put a title for that window.
+Let's say galaxy. What you pass here
+
+103
+00:05:34,760 --> 00:05:45,380
+is the image object, so this one. Great.
+And then what you want to do is you want
+
+105
+00:05:45,380 --> 00:05:52,430
+to specify a time for your window
+to be closed because this will show the
+
+107
+00:05:52,430 --> 00:05:57,110
+window but you also want to define some
+functionalities so that the user can
+
+109
+00:05:57,110 --> 00:06:02,900
+close the window. If you put 0 here
+when the user presses any button, the window
+
+111
+00:06:02,900 --> 00:06:09,620
+will close. Let me change this to cv2.
+So if you put 0, the user can
+
+113
+00:06:09,620 --> 00:06:16,280
+close the window pressing any button.
+If you want to put a time you could say
+
+115
+00:06:16,280 --> 00:06:23,990
+2 000 and that implies 2 000 milliseconds,
+so that means 2 seconds. So we said how
+
+117
+00:06:23,990 --> 00:06:29,690
+the user wants to close the window and
+then you want to specify what to do when
+
+119
+00:06:29,690 --> 00:06:37,220
+the user presses a button or waits for
+2 seconds, so we want to destroy all windows.
+
+121
+00:06:37,220 --> 00:06:45,200
+That's the method that closes the window.
+Good, let's see what will happen.
+
+123
+00:06:45,200 --> 00:06:50,490
+Okay so we got the image displayed and
+it waited for two seconds and then it closed.
+
+125
+00:06:50,490 --> 00:07:01,410
+If you put it at zero the image
+will stay there, and if you press the
+
+127
+00:07:01,410 --> 00:07:07,650
+button it will close. And let me show the
+image again. Now the reason that you
+
+129
+00:07:07,650 --> 00:07:14,520
+don't see the image fit on my screen is
+that the image as you see in these values
+
+131
+00:07:14,520 --> 00:07:24,540
+is 1,485 pixels high so the height, this
+is the height and it's 990 pixels wide.
+
+133
+00:07:24,540 --> 00:07:33,720
+So my screen resolution is set at 1280
+by 720, so that means that this image
+
+135
+00:07:33,720 --> 00:07:39,620
+with this size doesn't fit on my screen
+because my screen is too small for this.
+
+137
+00:07:39,620 --> 00:07:46,110
+So in this case, let me close this.
+What you can do is you want to resize
+
+139
+00:07:46,110 --> 00:07:52,110
+the image and then show the resized image.
+So we load the image and before showing
+
+141
+00:07:52,110 --> 00:08:00,830
+it, before passing it to the imshow
+method you want to say let's say resized
+
+143
+00:08:00,830 --> 00:08:09,930
+image. That will be equal to cv2.resize.
+And this would get two parameters,
+
+145
+00:08:09,930 --> 00:08:15,840
+so the first is of course is the image
+object that you want to resize, so img is
+
+147
+00:08:15,840 --> 00:08:20,700
+our variable, and then you want to
+specify a tuple with the new dimensions.
+
+149
+00:08:20,700 --> 00:08:34,050
+I'll say 1,000 by 500 and then you want
+to pass the new image here, so what's
+
+151
+00:08:34,050 --> 00:08:39,930
+happening here is that Python is
+actually resizing the Numpy array,
+
+153
+00:08:39,930 --> 00:08:45,720
+so it will take the array with this
+number of pixels, number of values
+
+155
+00:08:45,720 --> 00:08:50,090
+and it will create an array
+with these new dimensions, so what will
+
+157
+00:08:50,090 --> 00:08:54,650
+happen there is that Python will
+interpolate those values, so it has quite
+
+159
+00:08:54,650 --> 00:09:02,000
+a lot of values here but then it goes
+from this to this, so when it sees let's
+
+161
+00:09:02,000 --> 00:09:09,740
+say it has 4 for one value and then six
+for the neighbor value, and what Python
+
+163
+00:09:09,740 --> 00:09:16,280
+will do is that it will get 4 and 6
+basically, and it will just make a value
+
+165
+00:09:16,280 --> 00:09:22,400
+out of it, so let's say five, that's
+basically the idea, so it interpolates
+
+167
+00:09:22,400 --> 00:09:27,320
+the values, and then it shows the
+interpolated image on the screen which
+
+169
+00:09:27,320 --> 00:09:37,220
+looks pretty nice in our eyes. Okay,
+let's see this. And this is the image.
+
+171
+00:09:37,220 --> 00:09:43,790
+And you see that this is quite stretched
+a little bit, so it was a tall image,
+
+173
+00:09:43,790 --> 00:09:50,810
+but now it's quite wide, and because
+this is actually the width of the image
+
+175
+00:09:50,810 --> 00:09:58,910
+and this is the height, so if you want
+you can see 500 and 1000. Save again.
+
+177
+00:09:58,910 --> 00:10:07,190
+And now you see more or less the true ratio
+of the image, but if you want to keep the
+
+179
+00:10:07,190 --> 00:10:16,190
+ratio of the image you'd want to go more
+advanced here, so let's say from this,
+
+181
+00:10:16,190 --> 00:10:21,680
+so let's say we would want to show a size
+that is half of this so that that would
+
+183
+00:10:21,680 --> 00:10:26,450
+keep the ratio of the image. So what we
+can do is we need to access to these
+
+185
+00:10:26,450 --> 00:10:32,870
+values, and we can grab those values
+form the shape, the method, so this produces
+
+187
+00:10:32,870 --> 00:10:44,120
+a tuple with these two values, and then we
+go here and say image shape, and this
+
+189
+00:10:44,120 --> 00:10:52,370
+would be this value, so 990 which has
+an index of 1, and then we have again
+
+191
+00:10:52,370 --> 00:10:59,770
+image dot shape with index of 0
+for this number.
+
+193
+00:11:00,630 --> 00:11:09,100
+And then we want to divide this by two.
+Okay, and I expect to get an error from
+
+195
+00:11:09,100 --> 00:11:15,820
+this, but let's see, so yeah we've got
+an error. It's a type error. Integer argument
+
+197
+00:11:15,820 --> 00:11:23,980
+expected got float, but here, what we're
+doing here is that when we divide this
+
+199
+00:11:23,980 --> 00:11:28,390
+number by two we will get a float, so we
+would get something
+
+201
+00:11:28,390 --> 00:11:33,090
+like 742.5
+In that case what you want to do is
+
+203
+00:11:36,440 --> 00:11:49,550
+convert this to an integer, so 742.5
+becomes 742, okay and let's keep
+
+205
+00:11:49,550 --> 00:12:00,529
+the consistency, so integers and for
+this as well. Let's see! We've got
+
+207
+00:12:00,529 --> 00:12:07,670
+an invalid syntax here, so it points us to
+line 11 somewhere in the beginning which
+
+209
+00:12:07,670 --> 00:12:14,230
+can be quite misleading, so you want to
+see before that line which is here and
+
+211
+00:12:14,230 --> 00:12:19,870
+you can see that this bracket here
+close is here, so we need another bracket
+
+213
+00:12:19,870 --> 00:12:27,800
+which closes in the first bracket here.
+So save that, try again and this time the
+
+215
+00:12:27,800 --> 00:12:34,940
+image looks good. So you'll learn how to
+load an image in Python, and you'll learn
+
+217
+00:12:34,940 --> 00:12:40,160
+how to resize an image, how to show an
+image on the screen and now let's go
+
+219
+00:12:40,160 --> 00:12:46,310
+ahead and write the resized image in a
+new file. For that you'd want to use the
+
+221
+00:12:46,310 --> 00:12:52,850
+imwrite method, so image write and
+you want to give a name to a new image.
+
+223
+00:12:52,850 --> 00:13:02,060
+Galaxy let's say resized dot jpg and
+then you pass the image object that you
+
+225
+00:13:02,060 --> 00:13:09,080
+want to store in this file.
+So the comma goes also here and the
+
+227
+00:13:09,080 --> 00:13:19,850
+image you want the store is resized image.
+That's it. Execute and we got the
+
+229
+00:13:19,850 --> 00:13:28,100
+old image resize on the fly, so Python
+gets a Numpy array, it interpolates it,
+
+231
+00:13:28,100 --> 00:13:32,930
+so it resizes it and then it shows it on
+the screen, so this is galaxy this one here.
+
+233
+00:13:32,930 --> 00:13:42,490
+And then we can close this and here
+we've got our new image, so galaxy resized.
+
+235
+00:13:43,400 --> 00:13:48,980
+So if you go to the folder where these
+files are, you'll see that this image
+
+237
+00:13:48,980 --> 00:13:56,540
+has new dimensions, so 495 by 742.
+And that's what I wanted to teach you
+
+239
+00:13:56,540 --> 00:14:00,000
+in this lecture. 
+Hope you enjoyed it and talk to you later.

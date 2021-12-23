@@ -1,0 +1,360 @@
+1
+00:00:00,060 --> 00:00:06,270
+Welcome to this lecture! We are done with
+sqlite3 so I hope you were able to build
+
+3
+00:00:06,270 --> 00:00:11,340
+this script that I showed you throughout
+the previous lectures because in
+
+5
+00:00:11,340 --> 00:00:16,289
+this lecture we are going to use the
+script but I'll modify it, so that it is
+
+7
+00:00:16,289 --> 00:00:22,439
+compatible, interactive with
+PostgreSQL databases so luckily most of
+
+9
+00:00:22,439 --> 00:00:27,330
+the code is the same with other with some
+slight changes. Of course we would need
+
+11
+00:00:27,330 --> 00:00:36,000
+another library called psycopg2 and then
+we will grab methods from that library
+
+13
+00:00:36,000 --> 00:00:42,510
+and unlike sqlite3 psycopg2 needs
+to be installed, so it's a third-party
+
+15
+00:00:42,510 --> 00:00:49,200
+library, it don't come as sub built-in
+Python library, so you need psycho PG 2
+
+17
+00:00:49,200 --> 00:00:54,750
+installed and you also need PostgreSQL
+installed in your computer. So in this
+
+19
+00:00:54,750 --> 00:00:59,760
+lecture I would like to show you how to
+install PostgreSQL and psycopg2 as well.
+
+21
+00:00:59,760 --> 00:01:07,890
+Alright, this is the official web
+page of PostgreSQL and you can just go
+
+23
+00:01:07,890 --> 00:01:16,890
+to downloads, just here or down here, and then
+you want to find your operating system,
+
+25
+00:01:16,890 --> 00:01:22,369
+so PostgreSQL works on Mac, Linux
+and Windows.
+
+27
+00:01:22,369 --> 00:01:29,310
+Solaris as well. So I'm on Windows.
+I'll just click on windows and when you
+
+29
+00:01:29,310 --> 00:01:33,960
+install PostgreSQL you are also
+installing the pgAdmin3 which is
+
+31
+00:01:33,960 --> 00:01:39,750
+a graphical tool where you can see your
+databases. If you're familiar with MySQL,
+
+33
+00:01:39,750 --> 00:01:46,890
+pgAdmin is equivalent to PHPMyAdmin.
+POstgreSQL also comes with a Stack
+
+35
+00:01:46,890 --> 00:01:51,950
+Builder which is a package that you can
+use to download and install other
+
+37
+00:01:51,950 --> 00:01:58,380
+extensions, PostgreSQL extensions, so let's
+say you want an extension for spatial
+
+39
+00:01:58,380 --> 00:02:03,180
+data so to store spatial data in PostgreSQL
+so that you can use it for GIS
+
+41
+00:02:03,180 --> 00:02:07,320
+applications, so that's an extension for
+that called PostGIS.
+
+43
+00:02:07,320 --> 00:02:12,720
+So anyway I'll show you
+to install extensions. First you need to
+
+45
+00:02:12,720 --> 00:02:24,689
+download PostgreSQL and I am on a Windows
+so I would click this and I'll wait a while
+
+47
+00:02:24,689 --> 00:02:27,500
+until my download finishes.
+So I'll quickly go through the
+
+49
+00:02:29,800 --> 00:02:39,730
+installation process. So I'm just being
+asked where I want to install PostgreSQL
+
+51
+00:02:39,730 --> 00:02:44,500
+and where my data will be stored and
+here it should be careful with this
+
+53
+00:02:44,500 --> 00:02:50,890
+credentials so your Super User, the ones
+who have most of the privileges to your
+
+55
+00:02:50,890 --> 00:03:00,580
+databases and your super user name is
+Postgres and I'd actually like to create
+
+57
+00:03:00,580 --> 00:03:12,300
+a simple file, a text file just to store
+my credentials. I would like to say the
+
+59
+00:03:21,250 --> 00:03:26,620
+password as well.
+One, two, three, all right. So I'll enter
+
+61
+00:03:26,620 --> 00:03:33,269
+postgres1234 password.
+Next and this is the port of your
+
+63
+00:03:38,350 --> 00:03:49,620
+server, of your database server so
+I'd want to take a note of this too.
+
+65
+00:03:52,370 --> 00:04:01,260
+This is a about your local settings so I'll
+just leave this default and you'll just
+
+67
+00:04:01,260 --> 00:04:16,590
+have to wait a while until the isolation finishes.
+All right, that was successful.
+
+69
+00:04:16,590 --> 00:04:21,539
+Now if you want to launch Stack Builder
+to install extensions for the PostgreSQL
+
+71
+00:04:21,539 --> 00:04:29,820
+database, you may want to have this checked.
+So this is my database server
+
+73
+00:04:29,820 --> 00:04:36,479
+and here you have a bunch of extensions
+that you may want to install.
+
+75
+00:04:36,479 --> 00:04:43,800
+For example spatial extensions and you
+have PostGIS for 32-bit 
+
+77
+00:04:43,800 --> 00:04:50,220
+and PostGIS for 64-bit.
+If I click Next this tells me that
+
+77
+00:04:46,729 --> 00:04:52,830
+If I click Next this tells me that
+I need one package at least to be
+
+79
+00:04:52,830 --> 00:05:05,099
+installed, so let me just install PostGIS.
+All right, I agreed to the PostGIS license and
+
+81
+00:05:05,099 --> 00:05:09,440
+then just go next.
+This is asking me about Gdal which is
+
+83
+00:05:14,250 --> 00:05:21,900
+another interface for GIS data.
+All right that was how to install external
+
+85
+00:05:21,900 --> 00:05:28,590
+extensions. If you want to go back to
+Stack Builder later your Stack Builder
+
+87
+00:05:28,590 --> 00:05:34,460
+should be here or you can just go to
+PostgreSQL and here you have pgAdmin
+
+89
+00:05:39,449 --> 00:05:44,400
+as well and here is the application Stack
+Builder. Alright, but if you want to work
+
+91
+00:05:44,400 --> 00:05:48,960
+with Python you want to access the
+PostgreSQL databases through Python so
+
+93
+00:05:48,960 --> 00:05:53,639
+you don't have to interact with these
+applications here. The way to interact
+
+95
+00:05:53,639 --> 00:06:00,539
+with PostgreSQL with Python is by
+installing psycopg2 and you can
+
+97
+00:06:00,539 --> 00:06:06,349
+install psycopg2 with pip.
+However you may run into problems
+
+99
+00:06:09,320 --> 00:06:16,710
+because psycopg2 is written in C so
+you need C compiler installed in your
+
+101
+00:06:16,710 --> 00:06:23,190
+system on Windows at least. You will not
+have this problem on a Mac and Linux.
+
+103
+00:06:23,190 --> 00:06:29,040
+I am quite sure. The solution to this?
+Actually there are a few solutions.
+
+105
+00:06:29,040 --> 00:06:34,320
+One of the solutions is that you may want
+to install visual studio on your Windows
+
+107
+00:06:34,320 --> 00:06:40,110
+machine, but that's quite a big programs
+and I wouldn't want to install that, so the
+
+109
+00:06:40,110 --> 00:06:47,780
+second solution which I prefer the most
+is to use precompiled Python libraries.
+
+111
+00:06:48,380 --> 00:06:57,060
+And you can find almost any Python
+libraries that require C compiler you
+
+113
+00:06:57,060 --> 00:07:02,700
+can find those libraries in this page
+served by Christoph Goblke, so we're
+
+115
+00:07:02,700 --> 00:07:14,160
+looking for psycopg2. Here you
+have the whl files, so a whl file is a
+
+117
+00:07:14,160 --> 00:07:18,450
+file that can be installed with pip so
+what you do when you install something
+
+119
+00:07:18,450 --> 00:07:24,720
+with pip, pip install psycopg2, pip is
+downloading the whl file from the
+
+121
+00:07:24,720 --> 00:07:30,030
+remote server and then it installs it in
+your system, so here you can look for
+
+123
+00:07:30,030 --> 00:07:36,740
+your version and this would be the file
+for my system.
+
+125
+00:07:43,970 --> 00:07:51,720
+So I'll just get this from here and paste it
+in here so that I can access it from the
+
+127
+00:07:51,720 --> 00:07:58,080
+Atom command line, so here is the file
+that I just downloaded so just go ahead
+
+129
+00:07:58,080 --> 00:08:06,150
+and pip install and then you will need
+to point to the whl file,
+
+131
+00:08:06,150 --> 00:08:09,140
+so dot whl, alright.
+And that was successfully installed. I can
+
+133
+00:08:14,250 --> 00:08:27,180
+quickly check if that is available and
+it seems to be working. You can also
+
+135
+00:08:27,180 --> 00:08:31,880
+check the version of your library if you
+want, so it's 2.6.1.
+
+137
+00:08:31,880 --> 00:08:37,919
+Alright so in the next lecture we will
+connect to the database to the postgreSQL
+
+139
+00:08:37,919 --> 00:08:42,870
+database and then we'll be creating
+tables and inserting data, viewing
+
+141
+00:08:42,870 --> 00:08:48,020
+deleting and updating them.
+So let's move on.
+

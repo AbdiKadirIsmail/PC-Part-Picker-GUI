@@ -1,0 +1,320 @@
+1
+00:00:00,829 --> 00:00:05,790
+All right, in the previous lecture I showed
+you the syntax of a function definition
+
+3
+00:00:05,790 --> 00:00:12,599
+and the syntax of how to call a
+function so this is the basic
+
+5
+00:00:12,599 --> 00:00:16,890
+representation of a function, but there
+are some more things that you can add to
+
+7
+00:00:16,890 --> 00:00:21,990
+a function, so that's what you're going
+to learn in this lecture and I'll make
+
+9
+00:00:21,990 --> 00:00:28,740
+this simple I'll delete this and here we are.
+So here we have only one
+
+11
+00:00:28,740 --> 00:00:33,660
+parameter, so this is called a function
+parameter, however you can have more than
+
+13
+00:00:33,660 --> 00:00:43,140
+one parameters for a function. Let's
+say seconds, so in this case I allow the
+
+15
+00:00:43,140 --> 00:00:49,230
+user to enter both minutes and seconds and
+the program will calculate the hours
+
+17
+00:00:49,230 --> 00:00:58,739
+based on that, so basically we want to
+add seconds here, seconds divided by 3600,
+
+19
+00:00:58,739 --> 00:01:05,640
+So I hope I am fine with the math here.
+So minutes divided by 60 give you hours.
+
+21
+00:01:05,640 --> 00:01:11,369
+And then seconds divided by the
+number of seconds in one hour gives you
+
+23
+00:01:11,369 --> 00:01:20,250
+the hours and yeah we add them up and we
+return hours, therefore let me delete
+
+25
+00:01:20,250 --> 00:01:26,790
+this 10 here. In this case when you call
+that kind of function with two
+
+27
+00:01:26,790 --> 00:01:38,060
+parameters, you'd want to pass two values.
+60 let's say and 300 for seconds, save.
+
+29
+00:01:39,020 --> 00:01:45,509
+Execute and you get 1.25 and that's how
+you can add multiple parameters to your
+
+31
+00:01:45,509 --> 00:01:52,500
+function and multiple values. Now if you
+don't pass the value there, one of the,
+
+33
+00:01:52,500 --> 00:01:58,290
+for one for one of the parameters and you
+execute, you get a type error. This is
+
+35
+00:01:58,290 --> 00:02:04,110
+saying type error minutes to hours it's
+missing one required positional argument
+
+37
+00:02:04,110 --> 00:02:11,009
+which is seconds, so you are not allowed
+to miss a value for a positional
+
+39
+00:02:11,009 --> 00:02:14,730
+argument,
+so seconds is a positional argument
+
+41
+00:02:14,730 --> 00:02:19,530
+which you need to pass in the function
+code and so these are referred to as
+
+43
+00:02:19,530 --> 00:02:24,230
+arguments when you use them here, when
+you're talking about function code and
+
+45
+00:02:24,230 --> 00:02:29,130
+they are referred to as parameters when
+you pass them in function definition,
+
+47
+00:02:29,130 --> 00:02:33,750
+so parameters and we're talking about
+function call you refer to them as
+
+49
+00:02:33,750 --> 00:02:39,690
+arguments and this is the value of the
+argument and so positional arguments
+
+51
+00:02:39,690 --> 00:02:45,900
+need to have a value passed here, but
+default arguments don't need a value and
+
+53
+00:02:45,900 --> 00:02:51,950
+a default argument is when you use
+something like that 70 and let's pass
+
+55
+00:02:51,950 --> 00:02:58,110
+300 in here, execute. So syntax error.
+Non default argument follows
+
+57
+00:02:58,110 --> 00:03:09,240
+default argument. The non default argument
+here is this on. So positional arguments
+
+59
+00:03:09,240 --> 00:03:15,140
+such as seconds are also referred to as
+non default arguments, so the non default argument
+
+61
+00:03:15,140 --> 00:03:21,510
+second follows the default argument and
+that gives you syntax error in Python
+
+63
+00:03:21,510 --> 00:03:25,590
+because Python will get confused when
+you pass this 300 here so it doesn't
+
+65
+00:03:25,590 --> 00:03:30,840
+know whether you pass it for this one or
+for this on here and therefore you need
+
+67
+00:03:30,840 --> 00:03:41,580
+to pass the default argument after the
+non default argument, so seconds and
+
+69
+00:03:41,580 --> 00:03:47,160
+minutes. Now if you save the script and
+go here, this time you get a correct
+
+71
+00:03:47,160 --> 00:03:55,410
+output so 1.25. So let me summarize again
+what's happening. We have a non default
+
+73
+00:03:55,410 --> 00:04:00,960
+argument and a default argument which
+has a default value therefore when you
+
+75
+00:04:00,960 --> 00:04:05,640
+call the function and you pass only one
+value Python knows that you are you're
+
+77
+00:04:05,640 --> 00:04:11,760
+passing that value for the non default
+argument and for the default argument
+
+79
+00:04:11,760 --> 00:04:17,130
+Python will use the value of 70 however
+if you pass another value there
+
+81
+00:04:17,130 --> 00:04:24,950
+they say 200 minutes, so the script
+executes. You get another output
+
+83
+00:04:24,950 --> 00:04:32,250
+because python this time used the value
+of 204 minutes instead of its default
+
+85
+00:04:32,250 --> 00:04:36,300
+value, so when you don't pass a value
+Python uses a default value, when you
+
+87
+00:04:36,300 --> 00:04:40,800
+pass it I can use this what you pass
+in the function code. So this is useful
+
+89
+00:04:40,800 --> 00:04:45,960
+when you create functions where some of
+the arguments will have a value that is
+
+91
+00:04:45,960 --> 00:04:53,190
+not very likely to change very often.
+Something else about functions before I
+
+93
+00:04:53,190 --> 00:05:00,750
+close this lecture. You don't always
+need a return keyword in here. You can
+
+95
+00:05:00,750 --> 00:05:07,370
+also do let's say print hours and then
+you don't need the print statement there.
+
+97
+00:05:07,370 --> 00:05:15,630
+You just do that execute, and you get the same
+output, however note that you know if you
+
+99
+00:05:15,630 --> 00:05:24,740
+do plus 10 now and you execute you get
+an error because it says NoneType and int,
+
+101
+00:05:24,740 --> 00:05:31,470
+unsupported operand type for NoneType
+and integer which means the NoneType is
+
+103
+00:05:31,470 --> 00:05:40,740
+this one here, so this is not a number
+and you can see that by doing print,
+
+105
+00:05:40,740 --> 00:05:49,560
+so print the type of that function,
+of that output, you'll see that this is an
+
+107
+00:05:49,560 --> 00:05:56,730
+NoneType so the function doesn't produce
+a number when you use print, so bottom line
+
+109
+00:05:56,730 --> 00:06:02,370
+is when it comes to what the function
+does you have two types of functions you
+
+111
+00:06:02,370 --> 00:06:09,780
+have a function that generates an output
+and you have functions that perform some
+
+113
+00:06:09,780 --> 00:06:15,030
+procedure, so this was an example of a
+function that performs some procedures
+
+115
+00:06:15,030 --> 00:06:19,890
+in this case what this function did was
+it calculated hours and it printed
+
+117
+00:06:19,890 --> 00:06:26,040
+hours, it didn't return an output and
+other cases might be like you know when
+
+119
+00:06:26,040 --> 00:06:30,030
+you create a file so you process
+some files, you create a text file, you write
+
+121
+00:06:30,030 --> 00:06:35,100
+some output in that text file and you
+don't need a return keyword in that case.
+
+123
+00:06:35,100 --> 00:06:38,160
+But, we will see that later when we
+cover file
+
+125
+00:06:38,160 --> 00:06:42,900
+handling in Python. Most of the time
+though you will have to return a value
+
+127
+00:06:42,900 --> 00:06:49,790
+here, so that's the idea, this is about
+this lecture and I'll talk you later.
+

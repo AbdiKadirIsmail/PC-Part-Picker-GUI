@@ -1,0 +1,308 @@
+1
+00:00:00,030 --> 00:00:06,299
+So in the previous lecture I introduced
+you to the sqlite3 library and I showed
+
+3
+00:00:06,299 --> 00:00:12,630
+you how to create a table in your SQLite
+database and how to insert data in your
+
+5
+00:00:12,630 --> 00:00:18,330
+database, and how to select data and view
+them in Python, so we have these four
+
+7
+00:00:18,330 --> 00:00:24,210
+lines for rows in our database table,
+and in this lecture I'll quickly show
+
+9
+00:00:24,210 --> 00:00:30,390
+you how to delete and update data
+from your table. So again I'll create
+
+11
+00:00:30,390 --> 00:00:37,140
+a function, so let me copy this and we
+still need to connect to the database
+
+13
+00:00:37,140 --> 00:00:43,500
+and create a cursor object and then we
+need to use the execute method and in
+
+15
+00:00:43,500 --> 00:00:52,620
+this case I would like to delete
+the row that has wine glass, so I inside
+
+17
+00:00:52,620 --> 00:01:03,840
+execute we would right delete from store
+where item equals, I would like to
+
+19
+00:01:03,840 --> 00:01:09,869
+use a question mark place holder here so
+question mark in brackets. We'd want
+
+21
+00:01:09,869 --> 00:01:16,110
+the parameter that we would pass through
+our function, so this item here is the one we
+
+23
+00:01:16,110 --> 00:01:25,229
+put inside here. Item and let me change
+the name of our function. So this is this one.
+
+25
+00:01:25,229 --> 00:01:31,470
+Don't confuse it with this, this is
+the column of our table. This was the
+
+27
+00:01:31,470 --> 00:01:38,850
+row of our previous function.
+Delete this as well and you also want to commit
+
+29
+00:01:38,850 --> 00:01:44,479
+the changes to your database.
+So conn.commit.
+
+31
+00:01:44,840 --> 00:01:50,939
+So that's it and I'd like to comment
+this out, so I don't want to execute
+
+33
+00:01:50,939 --> 00:01:56,490
+the insert function again, and I want the
+view function to be executed after we delete
+
+35
+00:01:56,490 --> 00:02:04,649
+the row, so delete. So which item,
+the row of which item would you want to delete?
+
+37
+00:02:04,649 --> 00:02:12,120
+So the item wine glass and let's see
+what will happen.
+
+39
+00:02:12,120 --> 00:02:20,340
+And we got an error, an sqlite3 error.
+Incorrect number of bindings supplied. Line 28.
+
+41
+00:02:20,340 --> 00:02:26,910
+So I can see here. There's something I often forget.
+You need to add a coma here.
+
+43
+00:02:26,910 --> 00:02:31,830
+You'll see that way I teach you how to
+connect to a PostgreSQL database
+
+45
+00:02:31,830 --> 00:02:37,860
+and how to query data from a PostgreSQL
+database. The code is quite similar but
+
+47
+00:02:37,860 --> 00:02:42,959
+it has some critical changes like
+this one here, so it can be confusing when
+
+49
+00:02:42,959 --> 00:02:50,329
+you work with different kind of databases.
+Let's try this out again and
+
+51
+00:02:50,329 --> 00:02:57,660
+yeah it seems to be working now.
+Wine glass is not here, so that's how you
+
+53
+00:02:57,660 --> 00:03:09,150
+delete a row. Let's now add another function
+for updating data. Update. In this one I
+
+55
+00:03:09,150 --> 00:03:14,280
+would like to update the quantity or
+water glasses, so I'd want to change
+
+57
+00:03:14,280 --> 00:03:19,079
+this from 10 to 11. Again you establish
+a connection to the database,
+
+59
+00:03:19,079 --> 00:03:27,269
+a cursor object and then you execute
+and here you enter the update SQL command.
+
+61
+00:03:27,269 --> 00:03:33,569
+So update. What you want to update is the
+store table and which column do you want
+
+63
+00:03:33,569 --> 00:03:40,230
+to update from the store table? So you
+want to set the name of the column which in
+
+65
+00:03:40,230 --> 00:03:45,810
+this case would be quantity, and that
+would be equal to what? Guess what?
+
+67
+00:03:45,810 --> 00:03:53,099
+Question mark and then you say where or
+let me show you how to update more than
+
+69
+00:03:53,099 --> 00:03:58,380
+one column, so if you wanted more than
+one column you'd use a comma and let's
+
+71
+00:03:58,380 --> 00:04:04,980
+say price equals another question mark
+alright so we say update store and set
+
+73
+00:04:04,980 --> 00:04:10,310
+quantity and price to these, but which row?
+So we need to specify the
+
+75
+00:04:10,310 --> 00:04:21,669
+conditional here, so where item equals to
+wine glass, or you can also set this to a question
+
+77
+00:04:21,669 --> 00:04:29,290
+mark so you have three placeholders here
+and then you have the quote to close
+
+79
+00:04:29,290 --> 00:04:36,610
+your SQL statement and inside brackets
+you want to pass the parameters quantity.
+
+81
+00:04:36,610 --> 00:04:43,570
+And you have the second one is price and item.
+When you have more than one
+
+83
+00:04:43,570 --> 00:04:50,250
+parameter here you don't put a comma at
+the end so all of this adds like this.
+
+85
+00:04:50,250 --> 00:04:56,139
+And you also want to pass these
+parameters here so they reflect your
+
+87
+00:04:56,139 --> 00:05:03,729
+function input, so what we have here is
+we are updating the store table and we
+
+89
+00:05:03,729 --> 00:05:09,330
+set the value of the quantity column and
+append the price column to these values
+
+91
+00:05:09,330 --> 00:05:15,789
+but only for those rows where the item
+will be equal to a given value, so we
+
+93
+00:05:15,789 --> 00:05:20,680
+give that value to this one here and
+the first two to these ones, so you get
+
+95
+00:05:20,680 --> 00:05:24,639
+the idea.
+Save the script and you need to call it here.
+
+97
+00:05:24,639 --> 00:05:33,910
+So let me comment this alt out and update.
+So what quantity do you want to pass?
+
+99
+00:05:33,910 --> 00:05:39,820
+11 let's say and the price
+was five let's say it will go up to six.
+
+101
+00:05:39,820 --> 00:05:50,860
+And which item you want to update?
+Water glass. That's it. Save your script and
+
+103
+00:05:50,860 --> 00:05:59,740
+try it out. And we got these values
+updated as we expected and that's what I
+
+105
+00:05:59,740 --> 00:06:04,150
+wanted to teach you in this lecture.
+It could be more practical to actually
+
+107
+00:06:04,150 --> 00:06:09,970
+have an ID here so we say quantity and
+price where the ID is equal to a number,
+
+109
+00:06:09,970 --> 00:06:16,240
+so we don't have to pass the entire name
+which can be confusing or it's prone to errors.
+
+111
+00:06:16,240 --> 00:06:22,690
+So in that case we would want
+to change the table here and we would
+
+113
+00:06:22,690 --> 00:06:28,570
+want to add a primary key that auto
+increments, but you'll learn how to do that
+
+115
+00:06:28,570 --> 00:06:32,259
+in the next section
+of course, so there I'll show you how to
+
+117
+00:06:32,259 --> 00:06:38,949
+to make the real world program and we
+will implement that in that program.
+
+119
+00:06:38,949 --> 00:06:43,899
+So these were some trivial examples and you
+get a much better idea
+
+121
+00:06:43,899 --> 00:06:50,860
+in the next session so next we will jump
+to PostgreSQL and we'll work with the
+
+123
+00:06:50,860 --> 00:06:55,680
+psycopg2 library. Talk to you later.

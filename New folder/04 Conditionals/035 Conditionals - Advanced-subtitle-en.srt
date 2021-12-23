@@ -1,0 +1,225 @@
+1
+00:00:00,439 --> 00:00:05,879
+Hi again, you should be able to remember
+this program which we built in one of
+
+3
+00:00:05,879 --> 00:00:10,830
+the previous lectures. What this does is
+it has this function definition which
+
+5
+00:00:10,830 --> 00:00:17,520
+gets the age and then it adds 50 to the
+age and that returns age plus 50 here and
+
+7
+00:00:17,520 --> 00:00:22,260
+you ask the user to enter some input
+and then you pass that input to the
+
+9
+00:00:22,260 --> 00:00:26,849
+program and then the program produces
+you know the age that the user submits
+
+11
+00:00:26,849 --> 00:00:41,489
+plus 50. That's the idea. Let's say 40 and
+get 90 point. Now the user may also
+
+13
+00:00:41,489 --> 00:00:47,700
+want to pass 200 for example for the age
+and you get to 250 which is not very
+
+15
+00:00:47,700 --> 00:00:54,050
+realistic let's be honest and here is
+where you want to make your program more
+
+17
+00:00:54,050 --> 00:01:00,960
+intelligent here is where you use a
+conditional, so slowly you are seeing how
+
+19
+00:01:00,960 --> 00:01:08,549
+you can use features of a programming
+language to make some real programs this
+
+21
+00:01:08,549 --> 00:01:13,770
+is not the real world program because in
+this it's depending on the a common
+
+23
+00:01:13,770 --> 00:01:19,560
+line interface is not very friendly to
+execute programs this way, but the logic
+
+25
+00:01:19,560 --> 00:01:24,330
+is going towards a real world program so
+let's go ahead and improve the program
+
+27
+00:01:24,330 --> 00:01:34,290
+so that if the user submits an age of
+let's say more than 150 you will not
+
+29
+00:01:34,290 --> 00:01:40,829
+calculate 150 plus 50 instead you will
+you print out a message that says you
+
+31
+00:01:40,829 --> 00:01:45,270
+it's not possible to have this age or
+something like. Let's go ahead
+
+33
+00:01:45,270 --> 00:01:50,909
+and do that. This is a function
+definition. Now you shouldn't incorporate
+
+35
+00:01:50,909 --> 00:01:55,560
+the conditional inside the function
+definition. You know it's good to leave
+
+37
+00:01:55,560 --> 00:02:01,579
+functions simple as it is now so it gets
+an input and it calculates the output,
+
+39
+00:02:01,579 --> 00:02:09,599
+so you can incorporate the conditional
+when you call the function in here, so
+
+41
+00:02:09,599 --> 00:02:16,480
+let me delete that. The function of you
+and then you asked for input, and then
+
+43
+00:02:16,480 --> 00:02:22,210
+instead of calling the function right
+away you first want to check, to evaluate
+
+45
+00:02:22,210 --> 00:02:31,930
+the input that the user submits, so let's
+check that. If age is less than 150 that
+
+47
+00:02:31,930 --> 00:02:39,820
+is the time when you want to call the
+function age, so you're passing age in
+
+49
+00:02:39,820 --> 00:02:52,240
+there, else, so if it's not less than 150
+you want to print out the message saying
+
+51
+00:02:52,240 --> 00:03:03,610
+something like how is that possible.
+So let me pass the print here as well, so
+
+53
+00:03:03,610 --> 00:03:09,790
+we're printing the output. And let me
+execute. I expect to get an error
+
+55
+00:03:09,790 --> 00:03:17,410
+here, but it's good to take things step
+by step. Enter your age. Let me enter 99
+
+57
+00:03:17,410 --> 00:03:26,670
+first and yeah you get an error which
+says type error. Unorderable types string
+
+59
+00:03:26,670 --> 00:03:31,980
+is less than integer, so basically
+Python cannot compare a string object
+
+61
+00:03:31,980 --> 00:03:37,660
+with an integer and this is in line 7
+which is this one here so this is a string.
+
+63
+00:03:37,660 --> 00:03:43,500
+This is an integer and the reason is that you know as
+I have mentioned before Python loads
+
+65
+00:03:43,500 --> 00:03:49,720
+user input as strings, so age will be a
+string data type so you want to convert
+
+67
+00:03:49,720 --> 00:03:54,700
+that into an integer or float. It's good
+to convert it to a float. You can either
+
+69
+00:03:54,700 --> 00:04:03,190
+do that here or you can do it here.
+I'll do it here like that, but if you do it
+
+71
+00:04:03,190 --> 00:04:10,750
+there then you can remove that from
+there, so don't need to convert age
+
+73
+00:04:10,750 --> 00:04:17,049
+twice to a float, you know you can convert
+it at the source in here and then you
+
+75
+00:04:17,049 --> 00:04:22,090
+can use it directly everywhere in your
+code so this is good when you're using
+
+77
+00:04:22,090 --> 00:04:26,010
+this input more than once in your code.
+You can covert it directly
+
+79
+00:04:26,010 --> 00:04:38,610
+here. Float, save, try again and you get
+the output so 99 plus 50, 149, and let
+
+81
+00:04:38,610 --> 00:04:44,480
+me try again
+to enter 151 which is above the threshold.
+
+83
+00:04:44,480 --> 00:04:50,810
+You get how is it possible?
+That the idea. This is how you use
+
+85
+00:04:50,810 --> 00:04:56,100
+conditional blocks. If your imagination
+is good then you can go ahead and improve
+
+87
+00:04:56,100 --> 00:05:01,920
+this program even further, so there's
+always something to improve. Give it
+
+89
+00:05:01,920 --> 00:05:06,260
+a try and I'll talk to you later.
+Thanks.
+

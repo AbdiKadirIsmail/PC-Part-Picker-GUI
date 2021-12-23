@@ -1,0 +1,305 @@
+1
+00:00:00,120 --> 00:00:05,540
+Hi there, and in this lecture what you're
+going to do is start to build our
+
+3
+00:00:05,540 --> 00:00:10,620
+Bookstore program, and specifically we're
+going to work on the graphical user
+
+5
+00:00:10,620 --> 00:00:16,680
+interface because you know this program
+has two parts so to say. So it has a
+
+7
+00:00:16,680 --> 00:00:22,680
+backend and it has frontend.
+The backend is the sqlite3
+
+9
+00:00:22,680 --> 00:00:29,880
+database code, so the code that interacts
+with the database and the frontend is a code
+
+11
+00:00:29,880 --> 00:00:36,210
+of the Tkinter library, so the code that
+builds up all these buttons, these
+
+13
+00:00:36,210 --> 00:00:43,140
+entries, this text, this list box, and
+this scroll bar. So normally you'd have
+
+15
+00:00:43,140 --> 00:00:47,969
+to choose whether you want to work on
+the backend code first or you want to
+
+17
+00:00:47,969 --> 00:00:52,860
+start building the frontend code but
+first of all though the very first thing
+
+19
+00:00:52,860 --> 00:00:57,570
+you want to do is actually to start
+defining some requirements. So you want
+
+21
+00:00:57,570 --> 00:01:02,789
+to see what your program will do.
+So let's say you want your program to show
+
+23
+00:01:02,789 --> 00:01:07,799
+a list of the current records, so when
+you press view all, you see the list of
+
+25
+00:01:07,799 --> 00:01:12,000
+records here, and then you want your
+program to search a current entry, and
+
+27
+00:01:12,000 --> 00:01:17,009
+then you want to add entry and update
+and select data, and then you want your
+
+29
+00:01:17,009 --> 00:01:21,869
+program to close the window. So basically
+these are our requirements and now you
+
+31
+00:01:21,869 --> 00:01:26,189
+can choose to start writing the backend
+so you could write a function that
+
+33
+00:01:26,189 --> 00:01:31,350
+selects all the data from the database
+and then you could return those data as text.
+
+35
+00:01:31,350 --> 00:01:36,090
+So you can just print them out just for
+now if you want to write the backend
+
+37
+00:01:36,090 --> 00:01:39,570
+first because you don't have the frontend.
+You don't have a graphical
+
+39
+00:01:39,570 --> 00:01:46,500
+user interface built yet, so you can just
+write the functions of the backend and then
+
+41
+00:01:46,500 --> 00:01:53,009
+print out the output, or you can start
+writing the front end first, so you build
+
+43
+00:01:53,009 --> 00:01:58,020
+this graphical user interface, but when
+you click those buttons nothing happens.
+
+45
+00:01:58,020 --> 00:02:02,790
+So basically you just draw this thing
+with Python, and then once you have done
+
+47
+00:02:02,790 --> 00:02:08,310
+that, you start building the backend and
+then you connect all these widgets,
+
+49
+00:02:08,310 --> 00:02:13,280
+all the commands of these buttons,
+with your back-end functions.
+
+51
+00:02:13,280 --> 00:02:17,870
+So it's a matter of preference whether you
+choose to work with the back end or the
+
+53
+00:02:17,870 --> 00:02:22,160
+front end first. In this course, in this
+section we're going to build the front
+
+55
+00:02:22,160 --> 00:02:26,840
+end first, so we're going to build
+a graphical user interface that will do
+
+57
+00:02:26,840 --> 00:02:31,580
+nothing for a while until we connect it
+to the backend. All right then, I would
+
+59
+00:02:31,580 --> 00:02:36,350
+like to first remove this vertical bar
+here because I'm going to draw the
+
+61
+00:02:36,350 --> 00:02:41,090
+graphical user interface here, so I'll go,
+I'm going to make a sketch for you to see
+
+63
+00:02:41,090 --> 00:02:47,030
+and to have a sketch in here all the time.
+So to remove this bar if
+
+65
+00:02:47,030 --> 00:02:52,580
+you're curious you can just go to
+settings, then there is a package that
+
+67
+00:02:52,580 --> 00:03:01,040
+actually shows that bar that's called
+Wrap guide and you want to display,
+
+69
+00:03:01,040 --> 00:03:05,780
+so this displays the line at the eightieth
+character in the editor, and that may
+
+71
+00:03:05,780 --> 00:03:10,430
+help you if you want, it may help you to
+keep a particular pattern, so you don't
+
+73
+00:03:10,430 --> 00:03:16,160
+want to have more than 80 characters in
+your code. So that bar helps you keep that row.
+
+75
+00:03:16,160 --> 00:03:21,620
+Anyway we don't want that
+so I just removed it, and I'm just going
+
+77
+00:03:21,620 --> 00:03:26,660
+to write a few notes inside the doc string.
+So you know that the doc string
+
+79
+00:03:26,660 --> 00:03:32,470
+is like a comment line, so if you put
+any anything inside these triple quotes
+
+81
+00:03:32,470 --> 00:03:38,720
+this is not read as code by Python, but
+it's just like a documentation string,
+
+83
+00:03:38,720 --> 00:03:49,010
+so just for humans to read. So let's say
+I want a program that stores this book
+
+85
+00:03:49,010 --> 00:04:02,630
+information, so Title and Author. Year, and
+ISBN, so the identification number for
+
+87
+00:04:02,630 --> 00:04:15,440
+books, and the user can view all records.
+They can search an entry
+
+89
+00:04:15,440 --> 00:04:20,829
+and add an entry, update an entry.
+Delete and they can close the program
+
+91
+00:04:24,630 --> 00:04:32,910
+if they want. Close. Great so if you start
+thinking about that and now you'd want
+
+93
+00:04:32,910 --> 00:04:39,840
+to have a graphical user interface that
+has all these buttons, so that the user
+
+95
+00:04:39,840 --> 00:04:45,030
+can do these actions through some
+buttons, and then you think about how
+
+97
+00:04:45,030 --> 00:04:50,220
+they can view records and you know that
+Tkinter has the Listbox widget that
+
+99
+00:04:50,220 --> 00:04:55,830
+allows you to display text as a list, so
+line by line, and then you want the user
+
+101
+00:04:55,830 --> 00:05:02,130
+to search an entry, add an entry, update
+entry, so you need some entry widgets.
+
+103
+00:05:02,130 --> 00:05:07,440
+And then of course you'd want some labels
+that can tell what each entry is about,
+
+105
+00:05:07,440 --> 00:05:12,870
+so that would be a label widget.
+And you may also want a scrollbar,
+
+107
+00:05:12,870 --> 00:05:19,350
+so that your list is scrollable, so if
+there are many records the user can
+
+109
+00:05:19,350 --> 00:05:24,300
+scroll through them and they can see
+the records under the list, and so
+
+111
+00:05:24,300 --> 00:05:30,389
+we've got a sketch. This of course
+requires some fantasy and maybe some
+
+113
+00:05:30,389 --> 00:05:35,010
+experience with user interface design,
+but it's very important that you
+
+115
+00:05:35,010 --> 00:05:40,650
+have a sketch, so I'm going to keep this
+sketch on the screen while I code the program.
+
+117
+00:05:40,650 --> 00:05:46,800
+Normally in real life you'd want to have
+a drawing maybe on real paper,
+
+119
+00:05:46,800 --> 00:05:51,960
+or just on a digital screen, but it's
+important to have it, and now that we
+
+121
+00:05:51,960 --> 00:05:53,360
+have it let's start building it
+in the next lecture.
+

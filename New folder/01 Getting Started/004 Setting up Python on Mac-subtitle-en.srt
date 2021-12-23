@@ -1,0 +1,233 @@
+1
+00:00:00,000 --> 00:00:03,720
+Hi and welcome to this new lecture, in
+this lecture you're going to learn how
+
+3
+00:00:03,720 --> 00:00:11,340
+to set up Python in a Mac computer so if
+you are Windows user you can skip this
+
+5
+00:00:11,340 --> 00:00:15,089
+lecture because you have a Windows
+computer and we explained how to set up
+
+7
+00:00:15,089 --> 00:00:19,859
+platform on Windows previously in the
+previous lectures and the instructions
+
+9
+00:00:19,859 --> 00:00:26,730
+or will also work for Linux computers
+because a Mac is based on Unix and so
+
+11
+00:00:26,730 --> 00:00:33,480
+let's begin, first thing you need to know
+is that you already have Python on your
+
+13
+00:00:33,480 --> 00:00:39,629
+Mac so Python comes shipped with Mac by
+default now let's go and open Python.
+
+15
+00:00:39,629 --> 00:00:47,280
+I'm going to click here and then type
+terminal and then open a terminal app so
+
+17
+00:00:47,280 --> 00:00:54,270
+terminal is equivalent of a command line
+on Windows and here no let's go ahead and
+
+19
+00:00:54,270 --> 00:01:01,020
+open Python, you can simply call Python
+and if you see these three arrows there
+
+21
+00:01:01,020 --> 00:01:09,570
+that means you are able to start a Python
+session so good news, however if you
+
+23
+00:01:09,570 --> 00:01:16,500
+look here you'll see this is Python 2.7
+so it's a bit outdated and the current
+
+25
+00:01:16,500 --> 00:01:22,409
+version of python is Python 3 so it's
+recommended that you actually install
+
+27
+00:01:22,409 --> 00:01:30,659
+Python 3 on your Mac or Linux instead of
+using the old version Python 2.7 because
+
+29
+00:01:30,659 --> 00:01:34,619
+we're going to use a lot of libraries
+later on the course and some libraries
+
+31
+00:01:34,619 --> 00:01:43,290
+may not be compatible for Python 2.7. You
+can still work with to python 2.7 if you
+
+33
+00:01:43,290 --> 00:01:49,740
+take the responsibility to fix errors
+and compatibility issues that may arise
+
+35
+00:01:49,740 --> 00:01:57,360
+as you learn Python, so it's going to be
+maybe some extra work, however I advise
+
+37
+00:01:57,360 --> 00:02:03,899
+you to install Python 3, so I'm going to
+exit Python 2 and the Python 2 session, exit
+
+39
+00:02:03,899 --> 00:02:12,450
+and two brackets and you go again back
+to the terminal. To install Python 3 open
+
+41
+00:02:12,450 --> 00:02:22,650
+a browser
+and then you should go to python.org, then go to
+
+43
+00:02:22,650 --> 00:02:29,220
+downloads and then install the latest
+version of Python which should be shown
+
+45
+00:02:29,220 --> 00:02:35,790
+here so python 3.6 is the current
+version and that should download
+
+47
+00:02:35,790 --> 00:02:44,520
+Python, you can see this bar in here and so
+please don't uninstall Python 2.7 if you
+
+49
+00:02:44,520 --> 00:02:50,670
+are planning to install Python 3.6
+because Python 2.7 is connected to your
+
+51
+00:02:50,670 --> 00:02:54,810
+operating system so if you uninstall it
+it you may harm your operating
+
+53
+00:02:54,810 --> 00:03:02,310
+system, so you may get some messy errors
+there so simply ignore python 2.7 and so
+
+55
+00:03:02,310 --> 00:03:08,280
+leave it be, don't uninstall it and
+simply click on this package that
+
+57
+00:03:08,280 --> 00:03:14,850
+you had just downloaded you should see
+the installation wizard so simply go
+
+59
+00:03:14,850 --> 00:03:22,620
+and click continue, continue, continue
+again and read the license if you like.
+
+61
+00:03:22,620 --> 00:03:33,000
+I'm going to go and click on agree and than
+install provide your user name in there, your
+
+63
+00:03:33,000 --> 00:03:42,240
+Mac user name, click on install software
+and so finally the installation was
+
+65
+00:03:42,240 --> 00:03:51,600
+smooth and it was successful, click on
+Close, I'm going to move it to trash.
+
+67
+00:03:51,600 --> 00:04:00,180
+So the installation package and now go
+ahead and go back to terminal, so
+
+69
+00:04:00,180 --> 00:04:08,940
+again if you enter Python you're going
+to get Python 2.7, so how do you get
+
+71
+00:04:08,940 --> 00:04:17,520
+Python 3? Well exit and simply click
+Python 3 just like that execute and
+
+73
+00:04:17,520 --> 00:04:24,180
+you'll see that this is Python 3.6.
+And yeah good luck. And so normally this
+
+75
+00:04:24,180 --> 00:04:29,730
+is the command you will be using on Mac
+which means whenever I type Python on
+
+77
+00:04:29,730 --> 00:04:37,200
+Windows you're going to type Python 3 on
+Mac or Linux as easy as that, so now you
+
+79
+00:04:37,200 --> 00:04:47,190
+have Python installed and here you can
+do operations, you know you get the idea.
+
+81
+00:04:47,190 --> 00:04:55,860
+However please note that what we do here
+we programming interactively so we're
+
+83
+00:04:55,860 --> 00:05:00,720
+simply writing some lines with code but
+these lines will not be saved anywhere if
+
+85
+00:05:00,720 --> 00:05:05,070
+we write them in this interactive
+Session, so what we want to do is we want
+
+87
+00:05:05,070 --> 00:05:11,550
+to write scripts of code, so Python files
+which we can save, we can save the code
+
+89
+00:05:11,550 --> 00:05:16,920
+and we can execute all the lines at one
+and we'll be doing that in the next
+
+91
+00:05:16,920 --> 00:05:22,920
+lecture so please follow me and I hope
+it works for you and I'll talk to you in
+
+93
+00:05:22,920 --> 00:05:25,370
+the next lecture.

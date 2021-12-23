@@ -1,0 +1,755 @@
+1
+00:00:00,060 --> 00:00:04,950
+Hey, welcome again and this is the final
+push that we will give to our
+
+3
+00:00:04,950 --> 00:00:09,269
+application, so by the end of this
+lecture you'll have a fully working
+
+5
+00:00:09,269 --> 00:00:16,500
+program that can store and retrieve book
+records in an SQLite database. So as you
+
+7
+00:00:16,500 --> 00:00:20,820
+know we have two scripts, we have
+frontend.py and we have
+
+9
+00:00:20,820 --> 00:00:24,779
+the backend.py script.
+We are completely done with a backend.py
+
+11
+00:00:24,779 --> 00:00:30,539
+script, so we have built all of our
+functions that connect to the database
+
+13
+00:00:30,539 --> 00:00:35,850
+insert, view, search, and delete, and update
+data, and now we need to go to the
+
+15
+00:00:35,850 --> 00:00:40,559
+frontend script because we need to
+tweak it a little bit so that the
+
+17
+00:00:40,559 --> 00:00:46,230
+frontend scrip is able to fetch, to get
+data from the backend script, or more
+
+19
+00:00:46,230 --> 00:00:52,289
+specifically is able to get the function
+outputs which are basically tuples of
+
+21
+00:00:52,289 --> 00:00:58,440
+data, and then insert those tuples of
+data in the list box. So basically the
+
+23
+00:00:58,440 --> 00:01:04,350
+user presses the bottom and then these
+functions are triggered and the data are
+
+25
+00:01:04,350 --> 00:01:09,540
+inserted to the list box. So let's start
+from the easiest things, and the first
+
+27
+00:01:09,540 --> 00:01:13,439
+thing I would like to implement is to
+get the records in the list box when the
+
+29
+00:01:13,439 --> 00:01:19,350
+user presses the view all button. First
+of all as I mentioned before you need to
+
+31
+00:01:19,350 --> 00:01:25,979
+import the backend script in here so that
+you are later able to refer to your
+
+33
+00:01:25,979 --> 00:01:32,909
+functions as something like backend dot
+view for example for the database view
+
+35
+00:01:32,909 --> 00:01:39,600
+function. Now I have been mentioning that
+to attach a function to a button you
+
+37
+00:01:39,600 --> 00:01:45,509
+need to go to where you have defined the
+button so to the button function and
+
+39
+00:01:45,509 --> 00:01:53,579
+then you add a command here, so command
+and then goes, here goes the function.
+
+41
+00:01:53,579 --> 00:01:58,740
+Now if we just call the view function of the
+backend script, so if we do backend dot
+
+43
+00:01:58,740 --> 00:02:05,159
+view, all we are doing is just
+executing the view function so we aren't
+
+45
+00:02:05,159 --> 00:02:10,289
+inserting any data to the list box.
+So what we want to do is have another
+
+47
+00:02:10,289 --> 00:02:13,690
+function and have that function grab the
+data from the view function,
+
+49
+00:02:13,690 --> 00:02:18,100
+and insert those data to the list box.
+For example let's call
+
+51
+00:02:18,100 --> 00:02:26,500
+that function view command, just like that.
+Remember you don't pass brackets here
+
+53
+00:02:26,500 --> 00:02:32,200
+because if you do when you execute
+the script this function here if you do
+
+55
+00:02:32,200 --> 00:02:37,240
+like this this function will be executed
+when Python reads your script, but you
+
+57
+00:02:37,240 --> 00:02:40,570
+don't want that. You want that when
+you press the button when the user
+
+59
+00:02:40,570 --> 00:02:46,630
+presses the button. This function is
+executed so the tkinter knows that and if
+
+61
+00:02:46,630 --> 00:02:52,480
+you just pass this like this, Python tkinter
+will execute it when the button is pressed.
+
+63
+00:02:52,480 --> 00:02:59,710
+So view command and now you need
+a view command function, so let's write
+
+65
+00:02:59,710 --> 00:03:06,750
+our functions just here. Def view command.
+So think about the output now. The output
+
+67
+00:03:13,960 --> 00:03:21,610
+we are getting is tuple, so I'm going to
+execute the view function here, so print
+
+69
+00:03:21,610 --> 00:03:27,730
+view just to see what we have if you
+have forgotten it. So Python backend.py,
+
+71
+00:03:27,730 --> 00:03:35,410
+and so we have actually we have
+a list of tuples, so tuples inside the
+
+73
+00:03:35,410 --> 00:03:42,190
+list and what we want to do now is to
+insert each of these tuples, so each of
+
+75
+00:03:42,190 --> 00:03:48,940
+these database rows as a new row
+inside the list, inside the list box.
+
+77
+00:03:48,940 --> 00:03:56,800
+So what we can do is we can iterate through
+this tuple, so that would be for row
+
+79
+00:03:56,800 --> 00:04:09,940
+in backend.view. So this
+is actually this list here, so this is
+
+81
+00:04:09,940 --> 00:04:17,590
+actually an object, a list object.
+Then at list1. I believe that's how
+
+83
+00:04:17,590 --> 00:04:24,100
+our list box is called. Yeah,
+so it's list1 as a variable holding
+
+85
+00:04:24,100 --> 00:04:30,940
+our list box, dot insert.
+Then the insert method gets two arguments.
+
+87
+00:04:30,940 --> 00:04:37,120
+The first argument is the index where
+you want to insert your values. So you
+
+89
+00:04:37,120 --> 00:04:40,960
+have a list box and that list box has
+several places, so it has the first
+
+91
+00:04:40,960 --> 00:04:45,700
+place and then the second, third and so on.
+So if you want to put it in the first
+
+93
+00:04:45,700 --> 00:04:50,710
+place you do enter zero. If you want to
+put it in the second you'd enter an index
+
+95
+00:04:50,710 --> 00:04:57,460
+of one here one here, and so on.
+But the thing about that we are iterating
+
+97
+00:04:57,460 --> 00:05:04,180
+through these tuples, so we go to the
+first tuple and then we would want to
+
+99
+00:05:04,180 --> 00:05:11,590
+put it, and we would want to put this
+tuple as the first item of the list, then
+
+101
+00:05:11,590 --> 00:05:18,190
+we would want the second to be put as
+second item, and so on, so in such cases
+
+103
+00:05:18,190 --> 00:05:23,980
+the insert method also has a special
+index that is called end and then you
+
+105
+00:05:23,980 --> 00:05:29,140
+pass the row, so what that means is that
+the new rows will be put at the end of the
+
+107
+00:05:29,140 --> 00:05:33,760
+list box. So you have this row and this
+is this is put as the first one, and then
+
+109
+00:05:33,760 --> 00:05:40,930
+this will be put at the end of the existing
+rows, so that ensures that every new row
+
+111
+00:05:40,930 --> 00:05:46,180
+is inserted at the end of the list box.
+So I hope that is clear and I
+
+113
+00:05:46,180 --> 00:05:53,940
+would actually like to execute the
+script, so now we have the frontend.py.
+
+115
+00:05:53,940 --> 00:06:03,550
+And I've made an error here,
+so actually I want to import backend
+
+117
+00:06:03,550 --> 00:06:13,930
+here like that, execute again and we got
+the interface, so let's see what view all has.
+
+119
+00:06:13,930 --> 00:06:23,320
+Name backend is not defined in
+line 5, so back, yeah of course it's
+
+121
+00:06:23,320 --> 00:06:30,150
+not defined because I have a typo here.
+Backend, all right. Let's try it again.
+
+123
+00:06:30,150 --> 00:06:33,510
+Close it.
+Let's see, great, so we got the rows
+
+125
+00:06:38,510 --> 00:06:43,970
+displayed in the list box, but when
+you press it again, and again, and again,
+
+127
+00:06:43,970 --> 00:06:50,840
+and again these rows would be appended
+to the existing ones, so we need to
+
+129
+00:06:50,840 --> 00:06:56,800
+think about how we can actually have an
+empty list box when we press the button.
+
+131
+00:06:56,800 --> 00:07:03,620
+That's actually very easy to do. We need
+to ensure here that when these lines are
+
+133
+00:07:03,620 --> 00:07:12,500
+executed, the list box is already empty.
+So what we can do is list one delete.
+
+135
+00:07:12,500 --> 00:07:18,740
+And 0 end ensure that the you are
+deleting everything from the index
+
+137
+00:07:18,740 --> 00:07:25,610
+of zero, from the row with index of zero to
+the end, to the last row.
+
+139
+00:07:25,610 --> 00:07:30,440
+So let's see how that goes.
+View all and if you press you all again,
+
+141
+00:07:30,440 --> 00:07:36,370
+view again, you always get all the rows
+that you have in the database, in the table.
+
+143
+00:07:36,370 --> 00:07:43,160
+Great, let's now go ahead and define
+a similar function for the search entry
+
+145
+00:07:43,160 --> 00:07:51,440
+button, so the button is this one here,
+search entry and again we want the user
+
+147
+00:07:51,440 --> 00:07:57,169
+to enter at least one value in the
+entries, in the entry boxes and then they
+
+149
+00:07:57,169 --> 00:08:01,100
+press the search entry button, and then
+they expect the program to return the
+
+151
+00:08:01,100 --> 00:08:07,220
+rows that contain the entry that the
+user input in the entry box. So again
+
+153
+00:08:07,220 --> 00:08:12,470
+you'd want to insert data in the list box,
+so again you can just call the
+
+155
+00:08:12,470 --> 00:08:18,860
+search function of the back end script
+in here, command, so you need a wrapper
+
+157
+00:08:18,860 --> 00:08:26,240
+function, so let's say search command.
+Another good reason that you want to use
+
+159
+00:08:26,240 --> 00:08:32,360
+these wrapper functions so to say is
+that in some cases like this one here, you
+
+161
+00:08:32,360 --> 00:08:37,669
+are passing some parameters to the
+function, so if you look at the back end
+
+163
+00:08:37,669 --> 00:08:44,990
+and the view function didn't have any
+parameters but the search function
+
+165
+00:08:44,990 --> 00:08:51,110
+has some parameters,
+so that means you're not allowed
+
+167
+00:08:51,110 --> 00:08:56,960
+to put brackets here, so you have to use
+another function where you call your
+
+169
+00:08:56,960 --> 00:09:01,880
+main backend search function with
+parameters actually, and that's what we
+
+171
+00:09:01,880 --> 00:09:12,650
+are going to do now, so def search command
+and again the search command what we
+
+173
+00:09:12,650 --> 00:09:18,200
+actually get as argument is a title that
+the user will input, an author name
+
+175
+00:09:18,200 --> 00:09:27,530
+a year, and ISBN number. Now the way we're
+going to get these parameters is from the
+
+177
+00:09:27,530 --> 00:09:33,920
+entry widgets, so where is the entry
+entry, entry? Here are the entry widgets,
+
+179
+00:09:33,920 --> 00:09:38,630
+and if you remember that we have this
+string van object here and this variable
+
+181
+00:09:38,630 --> 00:09:44,060
+that has the strings var data type will
+be given a value the text
+
+183
+00:09:44,060 --> 00:09:52,030
+or the number that the user enters in
+the entry widget, so keep that in mind.
+
+185
+00:09:52,030 --> 00:09:57,320
+Let's go ahead here and the first
+thing you want to do is list1.delete,
+
+187
+00:09:57,320 --> 00:10:04,940
+so you want to empty the list, alright.
+And then you need to loop through
+
+189
+00:10:04,940 --> 00:10:14,300
+the backend list output because you
+know in this case let's execute this
+
+191
+00:10:14,300 --> 00:10:21,340
+quickly, so the backend script, so we are
+searching for the author name John Smith.
+
+193
+00:10:21,340 --> 00:10:27,470
+Backend.py.
+Alright, we don't have any John Smith at
+
+195
+00:10:27,470 --> 00:10:34,480
+the moment, so let's look for John Smooth,
+so we got an empty list there, save again.
+
+197
+00:10:34,480 --> 00:10:40,790
+And you'll see that we got a list of tuples,
+so in this case we have only one tuple,
+
+199
+00:10:40,790 --> 00:10:46,150
+but you get the idea.
+That means we need to iterate through.
+
+201
+00:10:46,150 --> 00:10:57,080
+For row again in backend dot search,
+and here you need to be careful so the
+
+203
+00:10:57,080 --> 00:11:00,769
+search function has parameters and the
+first parameter will be title text,
+
+205
+00:11:00,769 --> 00:11:08,449
+so the text that the user
+is inputting in the entry widget,
+
+207
+00:11:08,449 --> 00:11:13,489
+in the text entry widget, however we are
+not done because the title text is
+
+209
+00:11:13,489 --> 00:11:20,569
+actually a string var object, so it's not
+a plain string and what we need to do is
+
+211
+00:11:20,569 --> 00:11:27,980
+actually append a get method here and this
+will output a string object, so if the user
+
+213
+00:11:27,980 --> 00:11:34,670
+enters John Smooth there, in the widget,
+this will produce a simple John Smooth string.
+
+215
+00:11:34,670 --> 00:11:44,029
+So I hope that makes sense.
+Author text again, get method. Then we
+
+217
+00:11:44,029 --> 00:11:56,179
+have year text dot get, and lastly ISBN
+text dot get. So for row in the list
+
+219
+00:11:56,179 --> 00:12:01,809
+that the search function will output for
+us when it searches the database
+
+221
+00:12:01,809 --> 00:12:13,220
+we simply want to insert new values at
+the end of the list, just like that.
+
+223
+00:12:13,220 --> 00:12:20,600
+I can see the syntax highlighting is not
+working here, so I probably have some
+
+225
+00:12:20,600 --> 00:12:29,290
+sort of typo. I'm missing a colon here.
+So now for and in were colored in purple.
+
+227
+00:12:29,290 --> 00:12:39,339
+Okay so let's try out the frontend
+script, and let's look for author John Smooth.
+
+229
+00:12:39,339 --> 00:12:47,269
+Well obviously I pressed the view all
+button so I got everything here.
+
+231
+00:12:47,269 --> 00:12:51,949
+So you want to press search button, alright?
+Search, search and it only shows
+
+233
+00:12:51,949 --> 00:12:55,209
+John Smooth.
+If you say view all, it shows everything.
+
+235
+00:12:55,209 --> 00:13:04,309
+So it seems to be working, and next is
+add entry button, so when a user presses
+
+237
+00:13:04,309 --> 00:13:09,529
+add entry button they expect that the
+data they have been typing in the four
+
+239
+00:13:09,529 --> 00:13:13,120
+entry widgets, these data will be stored
+in somewhere.
+
+241
+00:13:13,120 --> 00:13:17,529
+They don't know where, but
+they're stored somewhere, and they'll
+
+243
+00:13:17,529 --> 00:13:24,970
+be able to retrieve them, so that means
+you need to call the insert function
+
+245
+00:13:24,970 --> 00:13:30,399
+in here, in the backend script. So this
+function will get these four arguments,
+
+247
+00:13:30,399 --> 00:13:38,170
+so the values from the entry widgets and it
+will pose them in the book table, as easy
+
+249
+00:13:38,170 --> 00:13:46,209
+as that, so first thing we might want to
+do is go to the add entry button, so here
+
+251
+00:13:46,209 --> 00:13:54,809
+and then add a wrapper function here.
+Add command, and then we create an add
+
+253
+00:14:01,319 --> 00:14:09,040
+command function. And this is quite
+straightforward actually. You just say
+
+255
+00:14:09,040 --> 00:14:19,199
+backend dot insert and here pass
+these values, so I'll just copy this and
+
+257
+00:14:19,199 --> 00:14:27,120
+paste them here, so let's try this out.
+Let's try to add some entries. Let's say
+
+259
+00:14:31,629 --> 00:14:45,790
+Trees and Grass. Let's say Ben Sand, year
+1917 and just put a number there for the
+
+261
+00:14:45,790 --> 00:14:54,519
+ISBN, and add entry. So the entry has
+probably been added to his database, but
+
+263
+00:14:54,519 --> 00:15:00,220
+we didn't see anything, and you can see it
+with the view all function probably, so if
+
+265
+00:15:00,220 --> 00:15:06,009
+I press view all I will see "Trees and Grass",
+but it would be good that when we add entry,
+
+267
+00:15:06,009 --> 00:15:10,959
+this entry, the new entry is
+displayed here so that the user knows
+
+269
+00:15:10,959 --> 00:15:17,679
+that the entry was successfully added to
+the database. So here is "Trees and Grass".
+
+271
+00:15:17,679 --> 00:15:26,649
+And so let's go ahead and do something
+that the entry is shown
+
+273
+00:15:26,649 --> 00:15:31,150
+in the list box when
+user presence add entry, and what we can
+
+275
+00:15:31,150 --> 00:15:39,120
+do is we first need to ensure that the
+list is empty, so delete zero to end,
+
+277
+00:15:39,120 --> 00:15:47,860
+and the list, and that gives us an empty list.
+Then we insert new values
+
+279
+00:15:47,860 --> 00:15:55,030
+at the end of the list.
+So what values? Well these ones,
+
+281
+00:15:55,030 --> 00:16:02,430
+so the values that the user will enter.
+Just like that. So let's see how this goes.
+
+283
+00:16:02,610 --> 00:16:17,140
+I say "Grasslands", let's say Kirk Hammett
+and yea 1910, and a number there.
+
+285
+00:16:17,140 --> 00:16:25,270
+And this is not quite what we were expecting
+actually and we got this because we are
+
+287
+00:16:25,270 --> 00:16:31,990
+inserting here many values indeed, so we
+are telling Python to insert all these
+
+289
+00:16:31,990 --> 00:16:37,350
+in any new value, these based in a new one
+and this as well and so on so forth.
+
+291
+00:16:37,350 --> 00:16:44,530
+So the solution here is simple just put it as
+a single value, so as a tuple and then run
+
+293
+00:16:44,530 --> 00:16:54,010
+the program again. We have an error here.
+So we need one more bracket because this
+
+295
+00:16:54,010 --> 00:16:59,920
+bracket here closes here,
+so just like that.
+
+297
+00:16:59,920 --> 00:17:14,890
+Try it out again. Let's say "Wonderlands".
+Helena Gomez, 1944 and a number here.
+
+299
+00:17:14,890 --> 00:17:22,270
+Add entry and now we have the row in
+one single line. View all.
+
+301
+00:17:22,270 --> 00:17:30,220
+"Wonderlands" is there. "Grasslands"
+is also there, so let's move on.
+

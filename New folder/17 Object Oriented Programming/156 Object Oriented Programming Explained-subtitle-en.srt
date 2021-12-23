@@ -1,0 +1,260 @@
+1
+00:00:00,089 --> 00:00:06,060
+Hi and welcome to this new section where
+you'll learn about object-oriented
+
+3
+00:00:06,060 --> 00:00:12,570
+programming often referred to as OOP
+for short. Now if you have experience
+
+5
+00:00:12,570 --> 00:00:16,770
+with programming that's probably a
+familiar concept for you because OOP
+
+7
+00:00:16,770 --> 00:00:22,260
+is used in most of the languages,
+but I assume you don't know anything
+
+9
+00:00:22,260 --> 00:00:27,449
+about object-oriented programming so
+I'll explain the concept from the
+
+11
+00:00:27,449 --> 00:00:33,719
+beginning. Now there are various
+definitions of OOP out there and some
+
+13
+00:00:33,719 --> 00:00:39,600
+get very tricky, but I believe the best
+one to know is that object-oriented
+
+15
+00:00:39,600 --> 00:00:47,160
+programming is just a way to organize
+your code. That means Opie is not a must.
+
+17
+00:00:47,160 --> 00:00:52,620
+So you can simply use functions to build
+an application as we did here with our
+
+19
+00:00:52,620 --> 00:00:57,140
+bookstore application, and many
+programmers choose to not use
+
+21
+00:00:57,140 --> 00:01:03,870
+object-oriented programming to organize
+their code, they don't use the OOP way
+
+23
+00:01:03,870 --> 00:01:10,590
+to write their code in other words.
+However it is generally accepted that if
+
+25
+00:01:10,590 --> 00:01:17,640
+you have more than two functions which
+apply operations to the same object,
+
+27
+00:01:17,640 --> 00:01:23,040
+for instance a program that applies
+operations to a tkinter interface, so
+
+29
+00:01:23,040 --> 00:01:27,450
+you have this callback functions, and so
+you should organize these functions into
+
+31
+00:01:27,450 --> 00:01:34,369
+something called a class. Now because
+object-oriented programming is a complex
+
+33
+00:01:34,369 --> 00:01:41,159
+concept I didn't include that in the
+beginning of this course, so I wanted
+
+35
+00:01:41,159 --> 00:01:46,549
+that you first built some applications
+using functions which is more intuitive,
+
+37
+00:01:46,549 --> 00:01:53,189
+and then you move to object-oriented
+programming. So back to our graphical
+
+39
+00:01:53,189 --> 00:01:58,619
+user interface application. So the object
+here, I'm talking about objects and the object
+
+41
+00:01:58,619 --> 00:02:07,259
+here is the entire window with buttons
+and other widgets as well now we can put
+
+43
+00:02:07,259 --> 00:02:12,330
+all the attributes that define this
+object so this window such as
+
+45
+00:02:12,330 --> 00:02:16,319
+the title of the buttons, the label,
+and also the callback functions
+
+47
+00:02:16,319 --> 00:02:22,530
+attached to this object inside the class.
+So in our application we didn't use
+
+49
+00:02:22,530 --> 00:02:27,870
+classes, we used functions so this script
+here does not apply to object-oriented
+
+51
+00:02:27,870 --> 00:02:32,970
+programming, and putting this object
+inside a class means we are organizing
+
+53
+00:02:32,970 --> 00:02:37,410
+the code in a class which creates,
+an object so that's why we call it
+
+55
+00:02:37,410 --> 00:02:42,180
+object-oriented programming.
+And using classes to organize your code
+
+57
+00:02:42,180 --> 00:02:48,720
+is referred to as object-oriented
+programming, and what I'll do next is in
+
+59
+00:02:48,720 --> 00:02:56,180
+my backend script where I have the database
+operations I'll transform this script by
+
+61
+00:02:56,180 --> 00:03:02,700
+putting this inside a class and after
+that you can do the same for the frontend
+
+63
+00:03:02,700 --> 00:03:06,930
+interface so that you practice
+object-oriented programming. Now my
+
+65
+00:03:06,930 --> 00:03:11,819
+purpose here is not to train you how to
+write classes. I first want you to
+
+67
+00:03:11,819 --> 00:03:15,870
+understand classes, and many learning
+resources explain object-oriented
+
+69
+00:03:15,870 --> 00:03:21,480
+programming by saying something like we
+create a class that creates a dog object,
+
+71
+00:03:21,480 --> 00:03:26,910
+and the dogs can eat, and bark and so on.
+That's a good example to train
+
+73
+00:03:26,910 --> 00:03:31,829
+you to learn the syntax of a class, but
+hey what is a dog in in programming?
+
+75
+00:03:31,829 --> 00:03:35,910
+I mean you can scratch your head
+all day trying to come up with
+
+77
+00:03:35,910 --> 00:03:43,319
+a scenario where you have a dog as an
+object in your application, and then that
+
+79
+00:03:43,319 --> 00:03:47,370
+still a good example, but only if you have
+some years of experience in programming,
+
+81
+00:03:47,370 --> 00:03:54,959
+and you can quickly think of where and
+when to use classes based on such
+
+83
+00:03:54,959 --> 00:03:59,340
+examples. I assume you don't have these
+years of experience, so I'll use
+
+85
+00:03:59,340 --> 00:04:05,569
+real programming objects in this section
+to explain such a tricky concept as
+
+87
+00:04:05,569 --> 00:04:11,160
+object-oriented programming. So the best
+way to understand OOP is to first build
+
+89
+00:04:11,160 --> 00:04:17,070
+a program with a known object oriented
+programming approach, so using functions,
+
+91
+00:04:17,070 --> 00:04:24,510
+and once you know that program well, then
+you build that program again using
+
+93
+00:04:24,510 --> 00:04:30,570
+OOP, and then you automatically
+understand what OOP is by looking at how
+
+95
+00:04:30,570 --> 00:04:37,410
+things are different. So let me organize
+this code using classes now and later
+
+97
+00:04:37,410 --> 00:04:42,450
+we will build a simpler program from
+scratch where we create a bank
+
+99
+00:04:42,450 --> 00:04:47,460
+account object with Python, and we will
+apply functions to that object such as
+
+101
+00:04:47,460 --> 00:04:54,030
+withdraw, deposit, and so on. That's great,
+and yeah, that's about this
+
+103
+00:04:54,030 --> 00:04:58,200
+introduction, and let's move on to the
+next lecture and write some classes.
+
